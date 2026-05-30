@@ -1,4 +1,4 @@
-# Deploying Card Coach (always-on public URL)
+# Deploying Manasplain (always-on public URL)
 
 The app is a plain Node/Express server with no database — it deploys to any
 Node host. It's **already deployed on Render** at

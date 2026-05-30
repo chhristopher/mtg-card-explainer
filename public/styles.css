@@ -524,6 +524,33 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.9px;
 }
+
+/* Collapsible section header: the <h3> lives inside a <summary> with a caret. */
+.section > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.section > summary::-webkit-details-marker { display: none; }
+.section > summary h3 {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+.section > summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-left: 0.6rem;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(-45deg);
+  transition: transform 0.18s ease;
+  flex-shrink: 0;
+}
+.section[open] > summary::after { transform: rotate(45deg); }
+.section-body { margin-top: 0.6rem; }
 .section .sec-icon {
   width: 16px;
   height: 16px;

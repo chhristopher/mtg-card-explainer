@@ -1,0 +1,38 @@
+{
+  "explanation": {
+    "in_plain_words": "Lightning Bolt is a spell you cast by paying one red mana. When you play it, you deal 3 damage to a target of your choice — this can be a creature on the battlefield or a player. It is one of the simplest and most direct damage spells in the game.",
+    "when_you_can_play_it": "Because it is an Instant, you can play Lightning Bolt at almost any time — on your own turn, on your opponent's turn, or even in response to something else happening. You just need to have one red mana available to pay for it.",
+    "how_it_works": [
+      "Choose a target: pick any creature on the battlefield, or pick any player (including yourself, though you usually wouldn't).",
+      "Pay the cost: spend one red mana from your lands.",
+      "The card resolves: Lightning Bolt deals exactly 3 damage to the target you chose.",
+      "If the target was a creature and it now has damage equal to or greater than its toughness, that creature dies. If the target was a player and they reach 0 life, they lose the game.",
+      "Lightning Bolt then goes to your graveyard (your discard pile)."
+    ],
+    "words_to_know": [
+      {
+        "term": "Instant",
+        "definition": "A type of card you can play at almost any time, even when it is not your turn. After it does its thing, it goes to your graveyard."
+      },
+      {
+        "term": "{R}",
+        "definition": "This is the mana cost. It means you must spend exactly one red mana to cast this card. Red mana comes from lands that produce red mana, like a Mountain."
+      },
+      {
+        "term": "Damage",
+        "definition": "A way of hurting a creature or player. If a creature takes damage equal to or more than its toughness (its bottom number), it dies. If a player takes damage that brings them to 0 life, they lose."
+      },
+      {
+        "term": "Any target",
+        "definition": "You get to freely choose what the damage hits — it can be any creature on the battlefield, or any player in the game."
+      }
+    ],
+    "example_turn": "Your opponent has a creature with 2 toughness blocking your attack. On your turn, you tap a Mountain to get one red mana and play Lightning Bolt. You point it at that creature. It deals 3 damage — more than the creature's toughness — so the creature dies, and Lightning Bolt goes to your graveyard."
+  },
+  "card_name": "Lightning Bolt",
+  "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+  "in_deck": false,
+  "deck_name": null,
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-05-30T21:42:17.105Z"
+}

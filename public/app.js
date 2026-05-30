@@ -529,27 +529,8 @@ function renderExplanation(data) {
     )
   );
 
-  if (e.in_your_deck) {
-    // The player already picked their deck, so don't repeat its name here —
-    // just label what this section is for.
-    const title = "How to use with your deck";
-    const accent = DECK_ACCENTS[selectedDeckId];
-    const accentStyle = accent ? ` style="--deck-accent:${accent}"` : "";
-    sections.push(
-      `<div class="section in-deck"${accentStyle}><h3>${secIcon(
-        ICONS.deck
-      )}${title}</h3><p>${withManaSymbols(e.in_your_deck)}</p></div>`
-    );
-  }
-
-  sections.push(
-    section(
-      "When you can play it",
-      `<p>${withManaSymbols(e.when_you_can_play_it)}</p>`,
-      ICONS.when
-    )
-  );
-
+  // "How it works" sits right below "In plain words" — it's the part beginners
+  // reach for first when a card is confusing.
   if (Array.isArray(e.how_it_works) && e.how_it_works.length) {
     // The <ol> already numbers each step; strip any leading "1. " / "2) " the
     // model may have added so beginners don't see doubled numbers.
@@ -561,6 +542,29 @@ function renderExplanation(data) {
       .join("");
     sections.push(section("How it works", `<ol>${steps}</ol>`, ICONS.how));
   }
+
+  if (e.in_your_deck) {
+    // The player already picked their deck, so don't repeat its name here —
+    // just label what this section is for.
+    const title = "How to use with your deck";
+    const accent = DECK_ACCENTS[selectedDeckId];
+    const accentStyle = accent ? ` style="--deck-accent:${accent}"` : "";
+    sections.push(
+      `<details class="section in-deck" open${accentStyle}><summary><h3>${secIcon(
+        ICONS.deck
+      )}${title}</h3></summary><div class="section-body"><p>${withManaSymbols(
+        e.in_your_deck
+      )}</p></div></details>`
+    );
+  }
+
+  sections.push(
+    section(
+      "When you can play it",
+      `<p>${withManaSymbols(e.when_you_can_play_it)}</p>`,
+      ICONS.when
+    )
+  );
 
   if (Array.isArray(e.words_to_know) && e.words_to_know.length) {
     // Each term is collapsed by default; tap it to reveal the definition.
@@ -605,9 +609,11 @@ function secIcon(paths) {
   return `<span class="sec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${paths}</svg></span>`;
 }
 
+// Each section is a collapsible <details> (open by default) so players can fold
+// away the parts they've read while scrolling a long explanation.
 function section(title, bodyHtml, icon) {
   const head = (icon ? secIcon(icon) : "") + title;
-  return `<div class="section"><h3>${head}</h3>${bodyHtml}</div>`;
+  return `<details class="section" open><summary><h3>${head}</h3></summary><div class="section-body">${bodyHtml}</div></details>`;
 }
 
 function esc(str) {

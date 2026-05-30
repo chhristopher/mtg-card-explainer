@@ -1,8 +1,8 @@
-# MTG Card Coach
+# Manasplain
 
-*The card explains itself. This explains the card.*
+*The card was vague. We won't be.*
 
-**Card Coach** is a small web app that gives **total beginners** a plain-English
+**Manasplain** is a small web app that gives **total beginners** a plain-English
 explanation of any Magic: The Gathering card. You type a card name, it pulls the
 official card data and rulings from [Scryfall](https://scryfall.com), and an AI
 writes a beginner-friendly explanation **grounded only in that official text** —
@@ -14,7 +14,7 @@ Built to be used on a **phone at the table**, mobile-first.
 Just open it on your phone. (Hosted on Render; see [Deployment](#deployment).)
 
 > Note: the GitHub repo is named `mtg-card-explainer` for historical reasons; the
-> app itself is **Card Coach**.
+> app itself is **Manasplain**.
 
 ## How it stays accurate (the important part)
 
@@ -33,7 +33,7 @@ are wrong — see "Reviewing explanations" below.
 
 ## Using it
 
-**Card Coach is live and public at the URL above** — hosted on Render, always-on,
+**Manasplain is live and public at the URL above** — hosted on Render, always-on,
 no login or install. Day to day you just open it on your phone. Pick your precon
 deck from the top bar
 once (it's remembered in your browser) and start looking up cards. The search bar
@@ -41,17 +41,18 @@ stays **pinned at the top** as you scroll, so you can look up the next card with
 scrolling back up; tapping it selects the previous card name so you can type right
 over it.
 
-Each explanation is broken into glanceable sections (in plain words / when to play
-/ how it works / words to know / example turn). **"Words to know"** lists each term
-collapsed — tap one to reveal its definition. If your card is in the chosen deck,
-an extra **"How to use with your deck"** section appears, tinted in that deck's own
-accent color.
+Each explanation is broken into glanceable sections (in plain words / how it works
+/ when to play / words to know / example turn) — **every section collapses**, so you
+can tap a header to fold away the parts you've read. **"Words to know"** lists each
+term collapsed too — tap one to reveal its definition. If your card is in the chosen
+deck, an extra **"How to use with your deck"** section appears, tinted in that deck's
+own accent color.
 
 ## How it looks
 
 The UI is **"Apple-sleek meets Magic"**: frosted-glass surfaces floating over a
 soft color-pie aurora on a near-black base, *Cinzel* for display type, and the five
-colored mana symbols beside the **Card Coach** title for a splash of color on
+colored mana symbols beside the **Manasplain** title for a splash of color on
 arrival. Specific touches:
 
 - **Real MTG mana symbols** (via the mana-font webfont) everywhere they appear —
@@ -71,7 +72,7 @@ text pips; nothing breaks functionally.
 
 ## Running it locally (for development)
 
-You don't need this to *use* Card Coach — the live site above is always on. This
+You don't need this to *use* Manasplain — the live site above is always on. This
 is only for working on the app itself.
 
 Requires Node 20+ (the host pins Node 22) and an Anthropic API key.

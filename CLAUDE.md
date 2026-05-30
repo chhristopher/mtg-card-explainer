@@ -1,8 +1,8 @@
-# MTG Card Coach — Project Context
+# Manasplain — Project Context
 
-> The app is branded **Card Coach** ("The card explains itself. This explains the
-> card."). The GitHub repo is still named `mtg-card-explainer` for historical
-> reasons; the live site is https://mtg-card-explainer.onrender.com.
+> The app is branded **Manasplain** ("The card was vague. We won't be."). The
+> GitHub repo is still named `mtg-card-explainer` for historical reasons; the
+> live site is https://mtg-card-explainer.onrender.com.
 
 ## What this is
 
@@ -38,8 +38,9 @@ that assumes many users.
 
 - ✅ **UI redesign** — "Apple-sleek meets Magic" theme (see *Design* below).
 - ✅ **Deployed live** to Render as an always-on public site (see *Deployment* below).
-- ✅ **"Card Coach" rebrand** — renamed from "Card Explainer"; colored card-style mana
-   symbols beside the title; new subheader.
+- ✅ **"Manasplain" rebrand** — renamed (was "Card Coach", originally "Card Explainer");
+   colored card-style mana symbols beside the title; subheader "The card was vague.
+   We won't be."
 - ✅ **Mobile polish pass** (mobile-first; desktop intentionally secondary):
   - **Sticky search bar** so you can look up the next card without scrolling back up.
   - **Inline mana symbols everywhere** — `withManaSymbols()` renders `{…}` tokens in the
@@ -119,9 +120,9 @@ flavor, mobile-first. Implemented in `public/styles.css` + `public/index.html`:
   **color-pie aurora** (radial W/U/B/R/G glows) on a near-black graphite base.
 - **Type:** *Cinzel* (serif, MTG-flavored) for the app title and card names; system font
   for body so it stays readable at the table.
-- **Header:** "Card Coach" in Cinzel, preceded by the five **colored card-style mana
+- **Header:** "Manasplain" in Cinzel, preceded by the five **colored card-style mana
   symbols** (`ms ms-w/u/b/r/g ms-cost`) for a splash of color on arrival. Subheader:
-  "The card explains itself. This explains the card."
+  "The card was vague. We won't be."
 - **Real mana symbols** via the *mana-font* webfont, not text circles, used **two ways**:
   - `renderMana()` renders the card's `mana_cost` string into the header (handles
     generic/hybrid `{W/U}`/monocolor-hybrid `{2/W}`/phyrexian `{W/P}`/tap).
@@ -140,13 +141,18 @@ flavor, mobile-first. Implemented in `public/styles.css` + `public/index.html`:
 - **Color-identity framing:** `applyColorIdentity()` reads `card.color_identity` and puts
   an accent bar on the card panel — mono color, **gold gradient for multicolor**, silver
   for colorless (`.card.id-w/u/b/r/g/multi/c` in CSS).
-- **Glanceable explanation:** each of the five sections is its own inset card with a small
-  inline-SVG line icon + gold tracked header (icons in the `ICONS` map). **"Words to
-  know"** terms are collapsible `<details>` (collapsed by default; tap to reveal). The
-  deck-context section is titled **"How to use with your deck"** and carries a **per-deck
-  accent color** via a `--deck-accent` CSS var set from `DECK_ACCENTS` in `app.js`
-  (TMNT green / Sultai violet / Rohan crimson) — *not* derived from color identity, since
-  all three precons are multicolor and would collapse to gold.
+- **Glanceable explanation:** each section is its own inset card with a small inline-SVG
+  line icon + gold tracked header (icons in the `ICONS` map). **Every section is itself a
+  collapsible `<details>`** (the `section()` helper emits `<details class="section" open>`
+  with the `<h3>` inside a `<summary>` + caret) — open by default, tap the header to fold
+  it away while scrolling. Section order: **In plain words → How it works → How to use with
+  your deck → When you can play it → Words to know → Example turn** ("How it works" sits
+  right below "In plain words" — it's what beginners reach for first). Within **"Words to
+  know"**, each term is *also* a nested `<details>`, collapsed by default. The deck-context
+  section is titled **"How to use with your deck"** and carries a **per-deck accent color**
+  via a `--deck-accent` CSS var set from `DECK_ACCENTS` in `app.js` (TMNT green / Sultai
+  violet / Rohan crimson) — *not* derived from color identity, since all three precons are
+  multicolor and would collapse to gold.
 - Graceful degradation: if the CDN fonts fail, Cinzel → serif fallback and mana symbols →
   text pips; nothing breaks functionally.
 
