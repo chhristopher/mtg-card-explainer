@@ -1,0 +1,16 @@
+# Render Blueprint — deploys this app as an always-on web service.
+# In Render: New + → Blueprint → pick this repo. You'll be asked for the one
+# secret below (ANTHROPIC_API_KEY). Render injects PORT automatically.
+services:
+  - type: web
+    name: mtg-card-explainer
+    runtime: node
+    plan: free # free tier cold-starts after ~15 min idle; upgrade to remove that
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true # redeploy on every push to the connected branch
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false # prompted in the dashboard; never stored in git
+      - key: EXPLAINER_MODEL
+        value: claude-sonnet-4-6

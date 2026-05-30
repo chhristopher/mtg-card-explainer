@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0c0d12" />
+    <title>MTG Card Explainer</title>
+
+    <!-- Fonts: Cinzel for MTG-flavored display type, Mana font for real mana symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/mana-font@1.15.7/css/mana.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true"></div>
+
+    <header>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <i class="ms ms-w"></i><i class="ms ms-u"></i><i class="ms ms-b"></i><i class="ms ms-r"></i><i class="ms ms-g"></i>
+        </span>
+        <h1>Card Explainer</h1>
+      </div>
+      <p class="tagline">Type a card name. Get a plain-English explanation.</p>
+    </header>
+
+    <main>
+      <div class="deck-bar">
+        <label for="deck">Which precon deck are you playing?</label>
+        <div class="select-wrap">
+          <select id="deck">
+            <option value="">No deck — just look up cards</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="search">
+        <span class="search-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </span>
+        <input
+          id="search"
+          type="text"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+          placeholder="Start typing a card name…"
+          aria-label="Card name"
+        />
+        <ul id="suggestions" class="suggestions" role="listbox"></ul>
+      </div>
+
+      <section id="status" class="status" hidden></section>
+
+      <article id="card" class="card" hidden>
+        <div class="card-head">
+          <div class="card-img-wrap">
+            <img id="card-img" class="card-img" alt="" />
+          </div>
+          <div class="card-meta">
+            <h2 id="card-name"></h2>
+            <div id="card-cost" class="mana"></div>
+            <p id="card-type" class="type-line"></p>
+          </div>
+        </div>
+
+        <details class="oracle" open>
+          <summary>
+            <span>Official card text</span>
+            <span class="oracle-hint">what the explanation is based on</span>
+          </summary>
+          <pre id="oracle-text"></pre>
+        </details>
+
+        <div id="explanation" class="explanation"></div>
+
+        <p id="explanation-meta" class="explanation-meta"></p>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        Card data &amp; images from
+        <a href="https://scryfall.com" target="_blank" rel="noopener">Scryfall</a>.
+        Explanations are AI-generated from official Oracle text and rulings —
+        double-check anything that affects the game.
+      </p>
+      <p class="fan-content">
+        Unofficial Fan Content permitted under the Wizards of the Coast Fan
+        Content Policy. Not approved/endorsed by Wizards. Portions of the
+        materials used are property of Wizards of the Coast. ©Wizards of the
+        Coast LLC.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

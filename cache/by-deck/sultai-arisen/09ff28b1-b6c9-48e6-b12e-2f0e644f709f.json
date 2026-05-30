@@ -1,0 +1,51 @@
+{
+  "explanation": {
+    "in_plain_words": "Gravecrawler is a small, cheap Zombie creature that hits hard for its cost but cannot defend you. Its special trick is that it can keep coming back: you can cast it again from the discard pile as long as you have another Zombie out.",
+    "when_you_can_play_it": "Like most creatures, you play it during your own turn, in your main phase, when nothing else is happening (no spells or abilities waiting to resolve). The ruling confirms this card does not change the normal timing for when you can cast a creature.",
+    "how_it_works": [
+      "Pay its mana cost of {B}, which is one black mana, to cast it as a 2/1 Zombie creature.",
+      "While it's on the battlefield, it can attack but it 'can't block' — meaning you can't use it to stop an opponent's attacking creature.",
+      "If it dies and goes to your graveyard (your discard pile), you don't lose it forever.",
+      "You may cast it again straight from your graveyard, but only while you control at least one other Zombie creature on the battlefield.",
+      "Once you've started casting it (it's 'on the stack'), it's fine even if you then lose your other Zombie — the casting still works."
+    ],
+    "words_to_know": [
+      {
+        "term": "{B}",
+        "definition": "One black mana. This is the cost you pay to cast Gravecrawler. A colored symbol like this means one mana of that specific color (here, black)."
+      },
+      {
+        "term": "Creature — Zombie",
+        "definition": "This tells you the card is a creature (something that can attack and block) and its creature type is Zombie. Its type matters because Gravecrawler cares whether you control other Zombies."
+      },
+      {
+        "term": "Power/Toughness (2/1)",
+        "definition": "The first number (2) is power, how much damage it deals in combat. The second number (1) is toughness, how much damage it can take before it dies."
+      },
+      {
+        "term": "Can't block",
+        "definition": "You are not allowed to use this creature to defend against an attacking creature. It can still attack."
+      },
+      {
+        "term": "Graveyard",
+        "definition": "The discard pile where your cards go when they die or are discarded. Gravecrawler can be cast again from here under the right condition."
+      },
+      {
+        "term": "Cast",
+        "definition": "To play a card by paying its cost, putting it into play."
+      },
+      {
+        "term": "On the stack",
+        "definition": "The waiting area where a spell sits after you cast it but before it finishes resolving. The ruling notes that once Gravecrawler is here, losing your other Zombie no longer matters."
+      }
+    ],
+    "example_turn": "You play Gravecrawler for one black mana and attack with it for 2 damage. Later it dies in combat and goes to your graveyard. Because you still have another Zombie creature on the battlefield, on a later turn you pay {B} again and bring Gravecrawler right back from your graveyard to attack once more.",
+    "in_your_deck": "Gravecrawler's recasting trick needs you to control another Zombie, and your deck has Zombie friends to help: Kotis, Sibsig Champion; Jarad, Golgari Lich Lord; and Stitcher's Supplier are all Zombies, so any of them lets you bring Gravecrawler back from the graveyard. Those three plus Teval, the Balanced Scale, Diviner of Mist, Floral Evoker, Steward of the Harvest, and Colossal Grave-Reaver all care about the graveyard, which fits Gravecrawler's habit of dying and returning over and over."
+  },
+  "card_name": "Gravecrawler",
+  "oracle_id": "09ff28b1-b6c9-48e6-b12e-2f0e644f709f",
+  "in_deck": true,
+  "deck_name": "Sultai Arisen (Tarkir: Dragonstorm)",
+  "model": "claude-opus-4-8",
+  "generated_at": "2026-05-30T01:32:26.640Z"
+}

@@ -1,0 +1,66 @@
+{
+  "explanation": {
+    "in_plain_words": "Raphael, the Muscle is a powerful Mutant Ninja Turtle creature card that you can use as your commander. He makes your creatures with markers on them hit twice as hard, and he brings a useful artifact token into play the moment he arrives.",
+    "when_you_can_play_it": "You can play Raphael from the command zone on any of your turns when you have enough mana available — specifically, four mana of any color plus one red mana (five mana total). If you have played him before in the same game and he was sent back to the command zone, he costs an extra two mana each time after the first.",
+    "how_it_works": [
+      "Pay four mana of any color plus one red mana to bring Raphael onto the battlefield as a 4/4 creature.",
+      "The moment Raphael enters the battlefield, you create a Mutagen token — a colorless artifact with the ability to spend one mana and tap it, then sacrifice it, to place a +1/+1 counter on any creature you choose. This can only be done at sorcery speed, meaning during your own main phase when nothing else is happening.",
+      "From now on, any creature you control that has at least one counter on it deals double the damage it normally would. For example, if a creature with a +1/+1 counter on it would deal 3 damage, it instead deals 6 damage.",
+      "If something prevents some of that damage, the doubling effect only applies to damage that actually goes through. If all damage is prevented, the doubling does nothing.",
+      "When damage is split between multiple targets — like a creature blocking another with trample — the damage is divided first, then each portion is doubled separately."
+    ],
+    "words_to_know": [
+      {
+        "term": "{4}{R} mana cost",
+        "definition": "To play Raphael, you must pay five mana total: four can be any color, and one must be red mana specifically."
+      },
+      {
+        "term": "Power/Toughness (4/4)",
+        "definition": "Raphael's strength as a fighter. The first number (4) is how much damage he deals in combat. The second number (4) is how much damage he can take before being destroyed."
+      },
+      {
+        "term": "Counter (marker)",
+        "definition": "A small marker placed on a creature. A +1/+1 counter permanently raises that creature's strength and toughness by 1 each while it stays on the creature. Other types of counters work similarly but have different effects."
+      },
+      {
+        "term": "Double (damage)",
+        "definition": "Any damage that one of your creatures with a counter would deal is multiplied by two. If it would deal 3 damage, it deals 6 instead."
+      },
+      {
+        "term": "Mutagen token",
+        "definition": "A colorless artifact token with the subtype Mutagen. You can spend one mana, tap it, and sacrifice it to place a +1/+1 counter on any creature. This can only be done during your main phase when nothing else is happening (called 'sorcery speed')."
+      },
+      {
+        "term": "Legendary",
+        "definition": "You can only control one permanent with the name 'Raphael, the Muscle' at a time. If you somehow got a second copy, you would have to choose one to keep and send the other to the graveyard."
+      },
+      {
+        "term": "Partner — Character select",
+        "definition": "A special ability that lets you use two commanders at once, as long as both of them also have the 'Partner — Character select' ability. You cannot mix this with other types of partner abilities. Both commanders start the game in the command zone, and your deck has 98 other cards instead of the usual 99."
+      },
+      {
+        "term": "{T} (tap symbol)",
+        "definition": "Turn the card sideways to show it has been used. A tapped card cannot be tapped again until your next turn when it 'untaps' and stands upright again."
+      },
+      {
+        "term": "Sacrifice",
+        "definition": "Permanently send a permanent you control to the graveyard as a cost or part of an effect. You choose to do this; it is not destruction from damage."
+      },
+      {
+        "term": "Sorcery speed",
+        "definition": "Something that can only be done during your own main phase, when no other spells or abilities are waiting to resolve."
+      },
+      {
+        "term": "Trample",
+        "definition": "Not defined in the provided information, but referenced in the rulings in the context of how damage splitting works with Raphael's doubling effect."
+      }
+    ],
+    "example_turn": "It is your turn. You have five mana available, including one red mana. You play Raphael from the command zone, paying the five mana. Immediately, a Mutagen token appears on the battlefield. On a later turn, you spend one mana, tap the Mutagen token, and sacrifice it to place a +1/+1 counter on your other creature, which is a 3/3. It becomes a 4/4. Now, because that creature has a counter on it, Raphael's ability applies: when it attacks and would deal 4 damage, it instead deals 8 damage."
+  },
+  "card_name": "Raphael, the Muscle",
+  "oracle_id": "22008c3b-6e15-41cc-a15c-7871495191aa",
+  "in_deck": false,
+  "deck_name": null,
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-05-30T03:52:47.279Z"
+}

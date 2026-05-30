@@ -1,0 +1,24 @@
+{
+  "explanation": {
+    "in_plain_words": "Raphael appears to be a special card associated with the color red, but the information provided does not include enough detail to fully explain what this card does or how it works in a game. It may be a helper card, a token, or some other non-standard card type rather than a regular spell you cast.",
+    "when_you_can_play_it": "This cannot be determined from the information provided. There is no mana cost or card type listed that would tell us when or how you are allowed to play this card.",
+    "how_it_works": [
+      "The only information provided is that this card has a theme color of red. No other game effects, abilities, or instructions are described in the data available.",
+      "Because there is no Oracle text describing what this card does, the steps for using it cannot be explained accurately.",
+      "If you received this card in a product, check the product's included rulebook or instruction sheet for guidance on how to use it."
+    ],
+    "words_to_know": [
+      {
+        "term": "{R} (Red mana symbol)",
+        "definition": "This symbol represents one mana of the red color. Red mana typically comes from Mountains or other red-producing lands in your collection. Here it only appears as a theme color label, not as a cost to pay."
+      }
+    ],
+    "example_turn": "A concrete example cannot be given because the card's rules text and game function are not included in the information provided. Please check the original product or rulebook for guidance."
+  },
+  "card_name": "Raphael",
+  "oracle_id": "1a2c9d72-61a4-44e3-a651-9717d75893f7",
+  "in_deck": false,
+  "deck_name": null,
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-05-30T03:52:36.831Z"
+}

@@ -1,0 +1,1008 @@
+{
+  "id": "sultai-arisen",
+  "name": "Sultai Arisen (Tarkir: Dragonstorm)",
+  "count": 85,
+  "cards": {
+    "teval, the balanced scale": {
+      "name": "Teval, the Balanced Scale",
+      "keywords": [
+        "flying",
+        "mill"
+      ],
+      "subtypes": [
+        "spirit",
+        "dragon"
+      ],
+      "themes": [
+        "tokens",
+        "the graveyard",
+        "+1/+1 from attacking"
+      ]
+    },
+    "kotis, sibsig champion": {
+      "name": "Kotis, Sibsig Champion",
+      "keywords": [
+        "counter"
+      ],
+      "subtypes": [
+        "zombie",
+        "warrior"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "the graveyard"
+      ]
+    },
+    "diviner of mist": {
+      "name": "Diviner of Mist",
+      "keywords": [
+        "flying",
+        "mill",
+        "mana cost",
+        "exile"
+      ],
+      "subtypes": [
+        "dragon"
+      ],
+      "themes": [
+        "the graveyard",
+        "+1/+1 from attacking"
+      ]
+    },
+    "floral evoker": {
+      "name": "Floral Evoker",
+      "keywords": [
+        "landfall",
+        "counter"
+      ],
+      "subtypes": [
+        "snake",
+        "druid"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "the graveyard",
+        "discarding"
+      ]
+    },
+    "steward of the harvest": {
+      "name": "Steward of the Harvest",
+      "keywords": [
+        "exile"
+      ],
+      "subtypes": [
+        "human",
+        "druid"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "colossal grave-reaver": {
+      "name": "Colossal Grave-Reaver",
+      "keywords": [
+        "flying",
+        "mill"
+      ],
+      "subtypes": [
+        "dragon"
+      ],
+      "themes": [
+        "the graveyard",
+        "+1/+1 from attacking"
+      ]
+    },
+    "gravecrawler": {
+      "name": "Gravecrawler",
+      "keywords": [],
+      "subtypes": [
+        "zombie"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "amphin mutineer": {
+      "name": "Amphin Mutineer",
+      "keywords": [
+        "encore",
+        "haste",
+        "sacrifice",
+        "exile"
+      ],
+      "subtypes": [
+        "salamander",
+        "pirate"
+      ],
+      "themes": [
+        "tokens",
+        "sacrificing",
+        "the graveyard"
+      ]
+    },
+    "river kelpie": {
+      "name": "River Kelpie",
+      "keywords": [
+        "persist",
+        "counter"
+      ],
+      "subtypes": [
+        "beast"
+      ],
+      "themes": [
+        "the graveyard",
+        "drawing cards"
+      ]
+    },
+    "dauthi voidwalker": {
+      "name": "Dauthi Voidwalker",
+      "keywords": [
+        "shadow",
+        "mana cost",
+        "counter",
+        "sacrifice",
+        "exile"
+      ],
+      "subtypes": [
+        "dauthi",
+        "rogue"
+      ],
+      "themes": [
+        "sacrificing",
+        "the graveyard"
+      ]
+    },
+    "disciple of bolas": {
+      "name": "Disciple of Bolas",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [
+        "human",
+        "wizard"
+      ],
+      "themes": [
+        "sacrificing",
+        "gaining life",
+        "drawing cards"
+      ]
+    },
+    "junji, the midnight sky": {
+      "name": "Junji, the Midnight Sky",
+      "keywords": [
+        "flying",
+        "menace"
+      ],
+      "subtypes": [
+        "dragon",
+        "spirit"
+      ],
+      "themes": [
+        "the graveyard",
+        "discarding"
+      ]
+    },
+    "lord of the forsaken": {
+      "name": "Lord of the Forsaken",
+      "keywords": [
+        "flying",
+        "trample",
+        "mill",
+        "sacrifice"
+      ],
+      "subtypes": [
+        "demon"
+      ],
+      "themes": [
+        "sacrificing",
+        "the graveyard",
+        "+1 mana / ramp"
+      ]
+    },
+    "necropolis fiend": {
+      "name": "Necropolis Fiend",
+      "keywords": [
+        "flying",
+        "delve",
+        "exile"
+      ],
+      "subtypes": [
+        "demon"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "noxious gearhulk": {
+      "name": "Noxious Gearhulk",
+      "keywords": [
+        "menace"
+      ],
+      "subtypes": [
+        "construct"
+      ],
+      "themes": [
+        "gaining life"
+      ]
+    },
+    "ob nixilis, the fallen": {
+      "name": "Ob Nixilis, the Fallen",
+      "keywords": [
+        "landfall",
+        "counter"
+      ],
+      "subtypes": [
+        "demon"
+      ],
+      "themes": [
+        "+1/+1 counters"
+      ]
+    },
+    "tasigur, the golden fang": {
+      "name": "Tasigur, the Golden Fang",
+      "keywords": [
+        "delve",
+        "mill",
+        "exile"
+      ],
+      "subtypes": [
+        "human",
+        "shaman"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "woe strider": {
+      "name": "Woe Strider",
+      "keywords": [
+        "escape",
+        "scry",
+        "counter",
+        "sacrifice",
+        "exile"
+      ],
+      "subtypes": [
+        "horror"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "tokens",
+        "sacrificing",
+        "the graveyard"
+      ]
+    },
+    "avenger of zendikar": {
+      "name": "Avenger of Zendikar",
+      "keywords": [
+        "landfall",
+        "counter"
+      ],
+      "subtypes": [
+        "elemental"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "tokens"
+      ]
+    },
+    "multani, yavimaya's avatar": {
+      "name": "Multani, Yavimaya's Avatar",
+      "keywords": [
+        "reach",
+        "trample"
+      ],
+      "subtypes": [
+        "elemental",
+        "avatar"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "shigeki, jukai visionary": {
+      "name": "Shigeki, Jukai Visionary",
+      "keywords": [
+        "channel",
+        "legendary"
+      ],
+      "subtypes": [
+        "snake",
+        "druid"
+      ],
+      "themes": [
+        "the graveyard",
+        "discarding"
+      ]
+    },
+    "consuming aberration": {
+      "name": "Consuming Aberration",
+      "keywords": [],
+      "subtypes": [
+        "horror"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "jarad, golgari lich lord": {
+      "name": "Jarad, Golgari Lich Lord",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [
+        "zombie",
+        "elf"
+      ],
+      "themes": [
+        "sacrificing",
+        "the graveyard"
+      ]
+    },
+    "lord of extinction": {
+      "name": "Lord of Extinction",
+      "keywords": [],
+      "subtypes": [
+        "elemental"
+      ],
+      "themes": []
+    },
+    "meren of clan nel toth": {
+      "name": "Meren of Clan Nel Toth",
+      "keywords": [
+        "counter"
+      ],
+      "subtypes": [
+        "human",
+        "shaman"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "hedron crab": {
+      "name": "Hedron Crab",
+      "keywords": [
+        "mill",
+        "landfall"
+      ],
+      "subtypes": [
+        "crab"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "wonder": {
+      "name": "Wonder",
+      "keywords": [
+        "flying"
+      ],
+      "subtypes": [
+        "incarnation"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "reassembling skeleton": {
+      "name": "Reassembling Skeleton",
+      "keywords": [],
+      "subtypes": [
+        "skeleton",
+        "warrior"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "stitcher's supplier": {
+      "name": "Stitcher's Supplier",
+      "keywords": [
+        "mill"
+      ],
+      "subtypes": [
+        "zombie"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "kishla skimmer": {
+      "name": "Kishla Skimmer",
+      "keywords": [
+        "flying"
+      ],
+      "subtypes": [
+        "bird",
+        "scout"
+      ],
+      "themes": [
+        "the graveyard",
+        "drawing cards"
+      ]
+    },
+    "sakura-tribe elder": {
+      "name": "Sakura-Tribe Elder",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [
+        "snake",
+        "shaman"
+      ],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "satyr wayfinder": {
+      "name": "Satyr Wayfinder",
+      "keywords": [],
+      "subtypes": [
+        "satyr"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "springbloom druid": {
+      "name": "Springbloom Druid",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [
+        "elf",
+        "druid"
+      ],
+      "themes": [
+        "sacrificing"
+      ]
+    },
+    "timeless witness": {
+      "name": "Timeless Witness",
+      "keywords": [
+        "eternalize",
+        "mana cost",
+        "exile"
+      ],
+      "subtypes": [
+        "human",
+        "shaman"
+      ],
+      "themes": [
+        "tokens",
+        "the graveyard"
+      ]
+    },
+    "nyx weaver": {
+      "name": "Nyx Weaver",
+      "keywords": [
+        "reach",
+        "mill",
+        "exile"
+      ],
+      "subtypes": [
+        "spider"
+      ],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "skull prophet": {
+      "name": "Skull Prophet",
+      "keywords": [
+        "mill"
+      ],
+      "subtypes": [
+        "human",
+        "druid"
+      ],
+      "themes": [
+        "the graveyard",
+        "+1 mana / ramp"
+      ]
+    },
+    "millikin": {
+      "name": "Millikin",
+      "keywords": [
+        "mill"
+      ],
+      "subtypes": [
+        "construct"
+      ],
+      "themes": [
+        "the graveyard",
+        "+1 mana / ramp"
+      ]
+    },
+    "lethal scheme": {
+      "name": "Lethal Scheme",
+      "keywords": [
+        "connive",
+        "convoke",
+        "counter"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 counters",
+        "drawing cards",
+        "discarding"
+      ]
+    },
+    "forbidden alchemy": {
+      "name": "Forbidden Alchemy",
+      "keywords": [
+        "flashback",
+        "flash",
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "grapple with the past": {
+      "name": "Grapple with the Past",
+      "keywords": [
+        "mill"
+      ],
+      "subtypes": [],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "harrow": {
+      "name": "Harrow",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing"
+      ]
+    },
+    "tear asunder": {
+      "name": "Tear Asunder",
+      "keywords": [
+        "kicker",
+        "enchant",
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": [
+        "artifacts",
+        "enchantments"
+      ]
+    },
+    "grisly salvage": {
+      "name": "Grisly Salvage",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "putrefy": {
+      "name": "Putrefy",
+      "keywords": [
+        "regenerate"
+      ],
+      "subtypes": [],
+      "themes": [
+        "artifacts"
+      ]
+    },
+    "afterlife from the loam": {
+      "name": "Afterlife from the Loam",
+      "keywords": [
+        "delve",
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "welcome the dead": {
+      "name": "Welcome the Dead",
+      "keywords": [
+        "flashback",
+        "flash",
+        "exile",
+        "tokens"
+      ],
+      "subtypes": [],
+      "themes": [
+        "tokens",
+        "the graveyard",
+        "drawing cards",
+        "discarding"
+      ]
+    },
+    "will of the sultai": {
+      "name": "Will of the Sultai",
+      "keywords": [
+        "mill",
+        "trample",
+        "counter"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 counters",
+        "the graveyard"
+      ]
+    },
+    "life from the loam": {
+      "name": "Life from the Loam",
+      "keywords": [
+        "dredge",
+        "mill"
+      ],
+      "subtypes": [],
+      "themes": [
+        "the graveyard",
+        "drawing cards"
+      ]
+    },
+    "casualties of war": {
+      "name": "Casualties of War",
+      "keywords": [
+        "enchant"
+      ],
+      "subtypes": [],
+      "themes": [
+        "artifacts",
+        "enchantments"
+      ]
+    },
+    "living death": {
+      "name": "Living Death",
+      "keywords": [
+        "sacrifice",
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "necromantic selection": {
+      "name": "Necromantic Selection",
+      "keywords": [
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "treasure cruise": {
+      "name": "Treasure Cruise",
+      "keywords": [
+        "delve",
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": [
+        "the graveyard",
+        "drawing cards"
+      ]
+    },
+    "victimize": {
+      "name": "Victimize",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "the graveyard"
+      ]
+    },
+    "cultivate": {
+      "name": "Cultivate",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "farseek": {
+      "name": "Farseek",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "rampant growth": {
+      "name": "Rampant Growth",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "teval's judgment": {
+      "name": "Teval's Judgment",
+      "keywords": [
+        "treasure"
+      ],
+      "subtypes": [],
+      "themes": [
+        "tokens",
+        "the graveyard",
+        "drawing cards"
+      ]
+    },
+    "phyrexian reclamation": {
+      "name": "Phyrexian Reclamation",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "crawling sensation": {
+      "name": "Crawling Sensation",
+      "keywords": [
+        "mill"
+      ],
+      "subtypes": [],
+      "themes": [
+        "tokens",
+        "the graveyard"
+      ]
+    },
+    "conduit of worlds": {
+      "name": "Conduit of Worlds",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "essence anchor": {
+      "name": "Essence Anchor",
+      "keywords": [
+        "surveil"
+      ],
+      "subtypes": [],
+      "themes": [
+        "tokens",
+        "the graveyard"
+      ]
+    },
+    "arcane signet": {
+      "name": "Arcane Signet",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "sol ring": {
+      "name": "Sol Ring",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "command beacon": {
+      "name": "Command Beacon",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "crypt of agadeem": {
+      "name": "Crypt of Agadeem",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "the graveyard",
+        "+1 mana / ramp"
+      ]
+    },
+    "darkwater catacombs": {
+      "name": "Darkwater Catacombs",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "dreamroot cascade": {
+      "name": "Dreamroot Cascade",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "drownyard temple": {
+      "name": "Drownyard Temple",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "the graveyard",
+        "+1 mana / ramp"
+      ]
+    },
+    "exotic orchard": {
+      "name": "Exotic Orchard",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "fetid pools": {
+      "name": "Fetid Pools",
+      "keywords": [
+        "cycling"
+      ],
+      "subtypes": [
+        "island",
+        "swamp"
+      ],
+      "themes": [
+        "drawing cards",
+        "discarding",
+        "+1 mana / ramp"
+      ]
+    },
+    "hinterland harbor": {
+      "name": "Hinterland Harbor",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "llanowar wastes": {
+      "name": "Llanowar Wastes",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "sunken hollow": {
+      "name": "Sunken Hollow",
+      "keywords": [],
+      "subtypes": [
+        "island",
+        "swamp"
+      ],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "temple of malady": {
+      "name": "Temple of Malady",
+      "keywords": [
+        "scry"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "woodland cemetery": {
+      "name": "Woodland Cemetery",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "command tower": {
+      "name": "Command Tower",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "opulent palace": {
+      "name": "Opulent Palace",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "cephalid coliseum": {
+      "name": "Cephalid Coliseum",
+      "keywords": [
+        "threshold",
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "the graveyard",
+        "drawing cards",
+        "discarding",
+        "+1 mana / ramp"
+      ]
+    },
+    "contaminated aquifer": {
+      "name": "Contaminated Aquifer",
+      "keywords": [],
+      "subtypes": [
+        "island",
+        "swamp"
+      ],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "foreboding landscape": {
+      "name": "Foreboding Landscape",
+      "keywords": [
+        "cycling",
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "drawing cards",
+        "discarding",
+        "+1 mana / ramp"
+      ]
+    },
+    "golgari rot farm": {
+      "name": "Golgari Rot Farm",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "haunted mire": {
+      "name": "Haunted Mire",
+      "keywords": [],
+      "subtypes": [
+        "swamp",
+        "forest"
+      ],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "memorial to folly": {
+      "name": "Memorial to Folly",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "the graveyard",
+        "+1 mana / ramp"
+      ]
+    },
+    "myriad landscape": {
+      "name": "Myriad Landscape",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "terramorphic expanse": {
+      "name": "Terramorphic Expanse",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    }
+  }
+}

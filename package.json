@@ -1,0 +1,19 @@
+{
+  "name": "mtg-precon-explainer",
+  "version": "0.1.0",
+  "description": "Beginner-friendly, grounded explanations for Magic: The Gathering precon cards.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  }
+}

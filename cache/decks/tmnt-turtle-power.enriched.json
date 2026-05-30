@@ -1,0 +1,1044 @@
+{
+  "id": "tmnt-turtle-power",
+  "name": "Teenage Mutant Ninja Turtles — Turtle Power!",
+  "count": 87,
+  "cards": {
+    "leonardo, the balance": {
+      "name": "Leonardo, the Balance",
+      "keywords": [
+        "partner",
+        "lifelink",
+        "menace",
+        "trample",
+        "counter"
+      ],
+      "subtypes": [
+        "mutant",
+        "ninja",
+        "turtle"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "tokens",
+        "gaining life"
+      ]
+    },
+    "donatello, the brains": {
+      "name": "Donatello, the Brains",
+      "keywords": [
+        "partner",
+        "tokens"
+      ],
+      "subtypes": [
+        "mutant",
+        "ninja",
+        "turtle"
+      ],
+      "themes": [
+        "tokens"
+      ]
+    },
+    "splinter, the mentor": {
+      "name": "Splinter, the Mentor",
+      "keywords": [
+        "partner",
+        "menace"
+      ],
+      "subtypes": [
+        "mutant",
+        "ninja",
+        "rat"
+      ],
+      "themes": [
+        "tokens"
+      ]
+    },
+    "raphael, the muscle": {
+      "name": "Raphael, the Muscle",
+      "keywords": [
+        "partner",
+        "double",
+        "counter"
+      ],
+      "subtypes": [
+        "mutant",
+        "ninja",
+        "turtle"
+      ],
+      "themes": [
+        "tokens"
+      ]
+    },
+    "michelangelo, the heart": {
+      "name": "Michelangelo, the Heart",
+      "keywords": [
+        "food",
+        "partner",
+        "trample",
+        "counter"
+      ],
+      "subtypes": [
+        "mutant",
+        "ninja",
+        "turtle"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "tokens"
+      ]
+    },
+    "heroes in a half shell": {
+      "name": "Heroes in a Half Shell",
+      "keywords": [
+        "vigilance",
+        "haste",
+        "trample",
+        "menace",
+        "counter"
+      ],
+      "subtypes": [
+        "mutant",
+        "ninja",
+        "turtle"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "drawing cards"
+      ]
+    },
+    "april o'neil, live on the scene": {
+      "name": "April O'Neil, Live on the Scene",
+      "keywords": [
+        "investigate",
+        "partner",
+        "sacrifice"
+      ],
+      "subtypes": [
+        "human",
+        "detective"
+      ],
+      "themes": [
+        "tokens",
+        "sacrificing",
+        "drawing cards",
+        "artifacts"
+      ]
+    },
+    "baxter, fly in the ointment": {
+      "name": "Baxter, Fly in the Ointment",
+      "keywords": [
+        "flying",
+        "counter"
+      ],
+      "subtypes": [
+        "insect",
+        "mutant",
+        "scientist"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "drawing cards",
+        "+1/+1 from attacking"
+      ]
+    },
+    "krang, the all-powerful": {
+      "name": "Krang, the All-Powerful",
+      "keywords": [
+        "counter"
+      ],
+      "subtypes": [
+        "utrom",
+        "robot"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "drawing cards"
+      ]
+    },
+    "ray fillet, wave warrior": {
+      "name": "Ray Fillet, Wave Warrior",
+      "keywords": [
+        "flying",
+        "evolve",
+        "counter"
+      ],
+      "subtypes": [
+        "fish",
+        "mutant"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "drawing cards"
+      ]
+    },
+    "bebop, skull & crossbones": {
+      "name": "Bebop, Skull & Crossbones",
+      "keywords": [
+        "partner with",
+        "partner",
+        "deathtouch",
+        "counter"
+      ],
+      "subtypes": [
+        "boar",
+        "mutant"
+      ],
+      "themes": [
+        "drawing cards"
+      ]
+    },
+    "rat king, pale piper": {
+      "name": "Rat King, Pale Piper",
+      "keywords": [
+        "menace",
+        "sacrifice"
+      ],
+      "subtypes": [
+        "rat",
+        "avatar"
+      ],
+      "themes": [
+        "tokens",
+        "sacrificing",
+        "drawing cards"
+      ]
+    },
+    "shredder, shadow master": {
+      "name": "Shredder, Shadow Master",
+      "keywords": [
+        "sacrifice",
+        "tokens",
+        "legendary"
+      ],
+      "subtypes": [
+        "human",
+        "ninja"
+      ],
+      "themes": [
+        "tokens",
+        "sacrificing",
+        "+1/+1 from attacking"
+      ]
+    },
+    "casey jones, back alley brute": {
+      "name": "Casey Jones, Back Alley Brute",
+      "keywords": [
+        "menace",
+        "counter"
+      ],
+      "subtypes": [
+        "human",
+        "berserker"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "+1/+1 from attacking"
+      ]
+    },
+    "tempestra, dame of games": {
+      "name": "Tempestra, Dame of Games",
+      "keywords": [
+        "haste",
+        "sacrifice",
+        "legendary"
+      ],
+      "subtypes": [
+        "elemental",
+        "illusion"
+      ],
+      "themes": [
+        "tokens",
+        "sacrificing",
+        "artifacts"
+      ]
+    },
+    "tokka & rahzar, unsupervised": {
+      "name": "Tokka & Rahzar, Unsupervised",
+      "keywords": [
+        "first strike",
+        "treasure",
+        "counter"
+      ],
+      "subtypes": [
+        "turtle",
+        "wolf",
+        "mutant"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "tokens"
+      ]
+    },
+    "leatherhead, iron gator": {
+      "name": "Leatherhead, Iron Gator",
+      "keywords": [
+        "haste",
+        "trample",
+        "counter"
+      ],
+      "subtypes": [
+        "crocodile",
+        "mutant",
+        "rogue"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "+1/+1 from attacking"
+      ]
+    },
+    "rocksteady, mutant marauder": {
+      "name": "Rocksteady, Mutant Marauder",
+      "keywords": [
+        "partner with",
+        "partner",
+        "trample",
+        "counter"
+      ],
+      "subtypes": [
+        "rhino",
+        "mutant"
+      ],
+      "themes": [
+        "+1/+1 counters"
+      ]
+    },
+    "big mother mouser": {
+      "name": "Big Mother Mouser",
+      "keywords": [
+        "double",
+        "counter",
+        "tokens"
+      ],
+      "subtypes": [
+        "robot"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "tokens",
+        "+1/+1 from attacking",
+        "artifacts"
+      ]
+    },
+    "lita, little orphan amphibian": {
+      "name": "Lita, Little Orphan Amphibian",
+      "keywords": [
+        "alliance",
+        "food",
+        "scry",
+        "counter",
+        "sacrifice"
+      ],
+      "subtypes": [
+        "mutant",
+        "ninja",
+        "turtle"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "tokens",
+        "sacrificing",
+        "gaining life",
+        "artifacts"
+      ]
+    },
+    "mona lisa, science geek": {
+      "name": "Mona Lisa, Science Geek",
+      "keywords": [
+        "reach"
+      ],
+      "subtypes": [
+        "lizard",
+        "mutant"
+      ],
+      "themes": []
+    },
+    "acidic slime": {
+      "name": "Acidic Slime",
+      "keywords": [
+        "deathtouch",
+        "enchant"
+      ],
+      "subtypes": [
+        "ooze"
+      ],
+      "themes": [
+        "artifacts",
+        "enchantments"
+      ]
+    },
+    "biogenic ooze": {
+      "name": "Biogenic Ooze",
+      "keywords": [
+        "counter"
+      ],
+      "subtypes": [
+        "ooze"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "tokens"
+      ]
+    },
+    "steelbane hydra": {
+      "name": "Steelbane Hydra",
+      "keywords": [
+        "enchant",
+        "counter"
+      ],
+      "subtypes": [
+        "turtle",
+        "hydra"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "artifacts",
+        "enchantments"
+      ]
+    },
+    "voracious hydra": {
+      "name": "Voracious Hydra",
+      "keywords": [
+        "trample",
+        "fight",
+        "double",
+        "counter"
+      ],
+      "subtypes": [
+        "hydra"
+      ],
+      "themes": [
+        "+1/+1 counters"
+      ]
+    },
+    "corpsejack menace": {
+      "name": "Corpsejack Menace",
+      "keywords": [
+        "counter"
+      ],
+      "subtypes": [
+        "fungus"
+      ],
+      "themes": [
+        "+1/+1 counters"
+      ]
+    },
+    "continue?": {
+      "name": "Continue?",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "the graveyard"
+      ]
+    },
+    "endless foot assault": {
+      "name": "Endless Foot Assault",
+      "keywords": [
+        "squad",
+        "enchant",
+        "tokens"
+      ],
+      "subtypes": [],
+      "themes": [
+        "tokens",
+        "enchantments"
+      ]
+    },
+    "here comes a new hero!": {
+      "name": "Here Comes a New Hero!",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "tokens",
+        "drawing cards"
+      ]
+    },
+    "irma, part-time mutant": {
+      "name": "Irma, Part-Time Mutant",
+      "keywords": [
+        "counter"
+      ],
+      "subtypes": [
+        "human",
+        "mutant",
+        "shapeshifter"
+      ],
+      "themes": [
+        "+1/+1 counters"
+      ]
+    },
+    "dimension x pizzasaur": {
+      "name": "Dimension X Pizzasaur",
+      "keywords": [
+        "counter",
+        "sacrifice"
+      ],
+      "subtypes": [
+        "food",
+        "alien",
+        "mutant"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "sacrificing",
+        "gaining life"
+      ]
+    },
+    "foot chopper": {
+      "name": "Foot Chopper",
+      "keywords": [
+        "equip",
+        "flying",
+        "sacrifice"
+      ],
+      "subtypes": [
+        "equipment"
+      ],
+      "themes": [
+        "tokens",
+        "sacrificing",
+        "drawing cards"
+      ]
+    },
+    "game over": {
+      "name": "Game Over",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "swift demise": {
+      "name": "Swift Demise",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "electric seaweed": {
+      "name": "Electric Seaweed",
+      "keywords": [
+        "haste",
+        "defender"
+      ],
+      "subtypes": [
+        "plant",
+        "wall"
+      ],
+      "themes": []
+    },
+    "fast forward": {
+      "name": "Fast Forward",
+      "keywords": [
+        "goad"
+      ],
+      "subtypes": [],
+      "themes": []
+    },
+    "shellshock": {
+      "name": "Shellshock",
+      "keywords": [
+        "counter",
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 counters",
+        "tokens",
+        "sacrificing"
+      ]
+    },
+    "special move": {
+      "name": "Special Move",
+      "keywords": [
+        "counter",
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 counters",
+        "sacrificing",
+        "+1/+1 from attacking",
+        "artifacts"
+      ]
+    },
+    "high score": {
+      "name": "High Score",
+      "keywords": [
+        "counter"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 counters",
+        "drawing cards"
+      ]
+    },
+    "level up": {
+      "name": "Level Up",
+      "keywords": [
+        "enchant",
+        "double",
+        "counter"
+      ],
+      "subtypes": [
+        "aura"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "drawing cards",
+        "+1/+1 from attacking"
+      ]
+    },
+    "ninja pizza": {
+      "name": "Ninja Pizza",
+      "keywords": [
+        "food",
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "tokens",
+        "sacrificing",
+        "gaining life",
+        "artifacts"
+      ]
+    },
+    "super combo": {
+      "name": "Super Combo",
+      "keywords": [
+        "replicate"
+      ],
+      "subtypes": [],
+      "themes": []
+    },
+    "double jump // flying kick": {
+      "name": "Double Jump // Flying Kick",
+      "keywords": [
+        "fuse",
+        "flying",
+        "counter"
+      ],
+      "subtypes": [],
+      "themes": []
+    },
+    "arcade cabinet": {
+      "name": "Arcade Cabinet",
+      "keywords": [
+        "double",
+        "counter",
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 counters",
+        "tokens",
+        "sacrificing",
+        "artifacts"
+      ]
+    },
+    "coin of mastery": {
+      "name": "Coin of Mastery",
+      "keywords": [
+        "treasure",
+        "counter",
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 counters",
+        "tokens",
+        "sacrificing",
+        "artifacts"
+      ]
+    },
+    "exploding barrel": {
+      "name": "Exploding Barrel",
+      "keywords": [
+        "counter",
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "artifacts"
+      ]
+    },
+    "mole module": {
+      "name": "Mole Module",
+      "keywords": [
+        "crew",
+        "menace",
+        "mill"
+      ],
+      "subtypes": [
+        "vehicle"
+      ],
+      "themes": []
+    },
+    "roadkill rodney": {
+      "name": "Roadkill Rodney",
+      "keywords": [
+        "squad",
+        "deathtouch",
+        "tokens"
+      ],
+      "subtypes": [
+        "robot"
+      ],
+      "themes": [
+        "tokens"
+      ]
+    },
+    "big apple, 3 a.m.": {
+      "name": "Big Apple, 3 a.m.",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "tokens"
+      ]
+    },
+    "hidden hideout": {
+      "name": "Hidden Hideout",
+      "keywords": [
+        "lifelink",
+        "counter"
+      ],
+      "subtypes": [],
+      "themes": [
+        "gaining life"
+      ]
+    },
+    "together forever": {
+      "name": "Together Forever",
+      "keywords": [
+        "support",
+        "enchant",
+        "counter"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 counters",
+        "enchantments"
+      ]
+    },
+    "vanquish the horde": {
+      "name": "Vanquish the Horde",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "wave goodbye": {
+      "name": "Wave Goodbye",
+      "keywords": [
+        "counter"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 counters"
+      ]
+    },
+    "blasphemous act": {
+      "name": "Blasphemous Act",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "assassin's trophy": {
+      "name": "Assassin's Trophy",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "chromatic lantern": {
+      "name": "Chromatic Lantern",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "cultivate": {
+      "name": "Cultivate",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "harmonize": {
+      "name": "Harmonize",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "drawing cards"
+      ]
+    },
+    "arcane signet": {
+      "name": "Arcane Signet",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "sol ring": {
+      "name": "Sol Ring",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "escape tunnel": {
+      "name": "Escape Tunnel",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "turtle lair": {
+      "name": "Turtle Lair",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "lessons from life": {
+      "name": "Lessons from Life",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "drawing cards"
+      ]
+    },
+    "everything pizza": {
+      "name": "Everything Pizza",
+      "keywords": [
+        "counter",
+        "sacrifice"
+      ],
+      "subtypes": [
+        "food"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "sacrificing",
+        "gaining life",
+        "drawing cards",
+        "discarding",
+        "artifacts",
+        "+1 mana / ramp"
+      ]
+    },
+    "cinder glade": {
+      "name": "Cinder Glade",
+      "keywords": [],
+      "subtypes": [
+        "mountain",
+        "forest"
+      ],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "city of brass": {
+      "name": "City of Brass",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "dragonskull summit": {
+      "name": "Dragonskull Summit",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "exotic orchard": {
+      "name": "Exotic Orchard",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "fabled passage": {
+      "name": "Fabled Passage",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "grand coliseum": {
+      "name": "Grand Coliseum",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "hinterland harbor": {
+      "name": "Hinterland Harbor",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "rain-slicked copse": {
+      "name": "Rain-Slicked Copse",
+      "keywords": [
+        "cycling"
+      ],
+      "subtypes": [
+        "forest",
+        "island"
+      ],
+      "themes": [
+        "drawing cards",
+        "discarding",
+        "+1 mana / ramp"
+      ]
+    },
+    "rootbound crag": {
+      "name": "Rootbound Crag",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "smoldering marsh": {
+      "name": "Smoldering Marsh",
+      "keywords": [],
+      "subtypes": [
+        "swamp",
+        "mountain"
+      ],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "sodden verdure": {
+      "name": "Sodden Verdure",
+      "keywords": [],
+      "subtypes": [
+        "forest",
+        "island"
+      ],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "spire garden": {
+      "name": "Spire Garden",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "sunken hollow": {
+      "name": "Sunken Hollow",
+      "keywords": [],
+      "subtypes": [
+        "island",
+        "swamp"
+      ],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "undergrowth stadium": {
+      "name": "Undergrowth Stadium",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "vernal fen": {
+      "name": "Vernal Fen",
+      "keywords": [],
+      "subtypes": [
+        "swamp",
+        "forest"
+      ],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "vibrant cityscape": {
+      "name": "Vibrant Cityscape",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "ash barrens": {
+      "name": "Ash Barrens",
+      "keywords": [
+        "landcycling",
+        "basic landcycling",
+        "typecycling",
+        "cycling"
+      ],
+      "subtypes": [],
+      "themes": [
+        "discarding",
+        "+1 mana / ramp"
+      ]
+    },
+    "command tower": {
+      "name": "Command Tower",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "evolving wilds": {
+      "name": "Evolving Wilds",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "path of ancestry": {
+      "name": "Path of Ancestry",
+      "keywords": [
+        "scry"
+      ],
+      "subtypes": [],
+      "themes": []
+    },
+    "thriving grove": {
+      "name": "Thriving Grove",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "thriving isle": {
+      "name": "Thriving Isle",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "thriving moor": {
+      "name": "Thriving Moor",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    }
+  }
+}

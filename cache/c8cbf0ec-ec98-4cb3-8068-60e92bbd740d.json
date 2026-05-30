@@ -1,0 +1,54 @@
+{
+  "explanation": {
+    "in_plain_words": "Teval, the Balanced Scale is a powerful dragon spirit creature that you control on the battlefield. When it attacks, it sends cards from your own deck to your graveyard and can bring a land back from the graveyard into play. It also rewards you with Zombie tokens whenever cards leave your graveyard for any reason.",
+    "when_you_can_play_it": "You can play Teval from your hand during your main phase, before you declare attackers. You must pay its mana cost: one mana of any color, one black mana, one green mana, and one blue mana — four mana total.",
+    "how_it_works": [
+      "Pay one generic mana, one black mana, one green mana, and one blue mana to put Teval onto the battlefield from your hand.",
+      "Teval enters as a 4/4 creature, meaning it has 4 attack power and 4 toughness (how much damage it takes before it dies). It also has flying, so most creatures cannot block it.",
+      "When you choose to attack with Teval, you immediately mill three cards — meaning you take the top three cards of your own deck and put them into your graveyard.",
+      "After milling, you may choose to take one land card from your graveyard and put it directly onto the battlefield. It comes in tapped, meaning it cannot be used for mana until your next turn.",
+      "Separately, any time one or more cards leave your graveyard — for any reason — you create a 2/2 black Zombie Druid creature token. Even if several cards leave at the same time, you only get one token from that single event."
+    ],
+    "words_to_know": [
+      {
+        "term": "Mana cost {1}{B}{G}{U}",
+        "definition": "The price to play this card. You need four mana total: one of any color, one black, one green, and one blue."
+      },
+      {
+        "term": "Legendary",
+        "definition": "You can only control one permanent with this exact name at a time. If you somehow get a second copy, you must choose one to keep and put the other into the graveyard."
+      },
+      {
+        "term": "Flying",
+        "definition": "This creature can only be blocked by other creatures that also have flying or have reach. Most creatures on the ground cannot block it."
+      },
+      {
+        "term": "Mill",
+        "definition": "Take the top card or cards of a deck and put them into that player's graveyard. Here, Teval mills your own deck — three cards go from your deck to your graveyard."
+      },
+      {
+        "term": "Graveyard",
+        "definition": "A discard pile where cards go when they are destroyed, used, or milled. Both players have their own graveyard next to their deck."
+      },
+      {
+        "term": "Tapped",
+        "definition": "A card that is turned sideways. A tapped land cannot be used to produce mana until your next turn when it 'untaps' (is turned upright again)."
+      },
+      {
+        "term": "2/2 token",
+        "definition": "A creature card created during the game (not from your deck). This token has 2 attack power and 2 toughness and counts as a real creature on the battlefield."
+      },
+      {
+        "term": "Trigger",
+        "definition": "An ability that automatically happens when a specific event occurs. Teval has two triggered abilities: one when it attacks, and one when cards leave your graveyard."
+      }
+    ],
+    "example_turn": "It is your turn and Teval is on the battlefield. You declare Teval as an attacker. First, you mill three cards — you put the top three cards of your deck into your graveyard. One of them happens to be a Forest land card. You choose to return that Forest from your graveyard to the battlefield tapped. Now three cards just left your graveyard (they were put there from the mill), but those cards moved into the graveyard, not out of it, so the second ability does not trigger yet. Later, if an opponent's spell exiles a card from your graveyard, that card is leaving your graveyard, and you would create a 2/2 Zombie Druid token."
+  },
+  "card_name": "Teval, the Balanced Scale",
+  "oracle_id": "c8cbf0ec-ec98-4cb3-8068-60e92bbd740d",
+  "in_deck": false,
+  "deck_name": null,
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-05-30T08:50:08.100Z"
+}

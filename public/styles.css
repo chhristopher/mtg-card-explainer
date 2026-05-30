@@ -1,0 +1,487 @@
+/* =============================================================
+   MTG Card Explainer — Apple-sleek meets Magic
+   Dark, translucent "frosted glass" surfaces over a soft
+   color-pie aurora. Cinzel for display type, system font for
+   readable body, the Mana webfont for real mana symbols.
+   ============================================================= */
+
+:root {
+  /* Base graphite, faintly warm */
+  --bg: #0c0d12;
+  --bg-2: #0a0b0f;
+
+  /* Translucent material surfaces (sit over the aurora) */
+  --surface: rgba(28, 30, 40, 0.62);
+  --surface-strong: rgba(36, 38, 50, 0.78);
+  --surface-inset: rgba(14, 15, 20, 0.55);
+
+  --hairline: rgba(255, 255, 255, 0.09);
+  --hairline-strong: rgba(255, 255, 255, 0.16);
+
+  --text: #f5f4f8;
+  --muted: #a2a3b0;
+  --faint: #71727e;
+
+  --accent: #e7c27d;        /* warm gold */
+  --accent-soft: rgba(231, 194, 125, 0.16);
+
+  /* MTG color pie (for identity frames + accents) */
+  --w: #f7e9c0;
+  --u: #5fa8e6;
+  --b: #9b86b3;
+  --r: #ec6a52;
+  --g: #5fc283;
+  --c: #c3b8a6;
+
+  --radius-lg: 22px;
+  --radius: 16px;
+  --radius-sm: 11px;
+
+  --shadow: 0 18px 50px -18px rgba(0, 0, 0, 0.75);
+  --shadow-soft: 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+
+  --font-display: "Cinzel", Georgia, "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+    Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* Soft color-pie aurora behind everything */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 35% at 12% 8%, rgba(95, 168, 230, 0.18), transparent 70%),
+    radial-gradient(38% 32% at 88% 4%, rgba(236, 106, 82, 0.16), transparent 70%),
+    radial-gradient(45% 40% at 50% 100%, rgba(95, 194, 131, 0.14), transparent 70%),
+    radial-gradient(50% 45% at 100% 60%, rgba(155, 134, 179, 0.16), transparent 70%),
+    var(--bg-2);
+}
+
+/* ---------------- Header ---------------- */
+header {
+  padding: 2rem 1.25rem 0.75rem;
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.brand-mark {
+  display: inline-flex;
+  gap: 2px;
+  font-size: 0.78rem;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+  background: linear-gradient(180deg, #fff 0%, var(--accent) 130%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+main {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 1rem 1.1rem 2rem;
+}
+
+/* Shared frosted-glass surface treatment */
+.deck-bar,
+.search input,
+.status,
+.card,
+.suggestions {
+  background: var(--surface);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid var(--hairline);
+}
+
+/* ---------------- Deck picker ---------------- */
+.deck-bar {
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.7rem;
+  box-shadow: var(--shadow-soft);
+}
+.deck-bar label {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 0.5rem;
+}
+.select-wrap {
+  position: relative;
+}
+.select-wrap::after {
+  content: "";
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: translateY(-65%) rotate(45deg);
+  pointer-events: none;
+}
+.deck-bar select {
+  width: 100%;
+  padding: 0.75rem 2rem 0.75rem 0.8rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--surface-inset);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  appearance: none;
+  -webkit-appearance: none;
+}
+.deck-bar select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* ---------------- Search + autocomplete ---------------- */
+.search { position: relative; }
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 19px;
+  height: 19px;
+  color: var(--faint);
+  pointer-events: none;
+}
+.search-icon svg { width: 100%; height: 100%; display: block; }
+
+#search {
+  width: 100%;
+  padding: 1rem 1rem 1rem 2.7rem;
+  font-size: 1.05rem;
+  font-family: inherit;
+  color: var(--text);
+  border-radius: var(--radius);
+  outline: none;
+  box-shadow: var(--shadow-soft);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+#search::placeholder { color: var(--faint); }
+#search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow-soft);
+}
+
+.suggestions {
+  list-style: none;
+  margin: 0.45rem 0 0;
+  padding: 0.3rem;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.suggestions:empty { display: none; }
+.suggestions li {
+  padding: 0.7rem 0.85rem;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background 0.12s ease;
+}
+.suggestions li:hover,
+.suggestions li[aria-selected="true"] {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* ---------------- Status ---------------- */
+.status {
+  margin-top: 1rem;
+  padding: 0.95rem 1rem;
+  border-radius: var(--radius);
+  color: var(--muted);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+.status.error { color: var(--r); border-color: rgba(236, 106, 82, 0.5); }
+
+/* ---------------- Card ---------------- */
+.card {
+  position: relative;
+  margin-top: 1rem;
+  border-radius: var(--radius-lg);
+  padding: 1.1rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+/* Color-identity accent bar across the top of the card */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--id-grad, linear-gradient(90deg, var(--c), #8c8378));
+}
+.card.id-w { --id-grad: linear-gradient(90deg, #fff6dd, var(--w)); }
+.card.id-u { --id-grad: linear-gradient(90deg, #8fccff, var(--u)); }
+.card.id-b { --id-grad: linear-gradient(90deg, #b6a4cc, var(--b)); }
+.card.id-r { --id-grad: linear-gradient(90deg, #ff8a73, var(--r)); }
+.card.id-g { --id-grad: linear-gradient(90deg, #88dba6, var(--g)); }
+.card.id-multi {
+  --id-grad: linear-gradient(90deg, var(--w), var(--u), var(--b), var(--r), var(--g));
+}
+.card.id-c { --id-grad: linear-gradient(90deg, #d9cfbf, var(--c)); }
+
+.card-head {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+}
+
+.card-img-wrap {
+  width: 42%;
+  max-width: 190px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.8);
+  background: var(--surface-inset);
+}
+.card-img {
+  display: block;
+  width: 100%;
+}
+
+.card-meta { min-width: 0; padding-top: 0.15rem; }
+.card-meta h2 {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+.type-line {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------------- Mana symbols (Mana font) ---------------- */
+.mana {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+.mana i.ms {
+  font-size: 1.18rem;
+  line-height: 1;
+}
+/* Fallback text pips for symbols the font can't render */
+.mana .pip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  border-radius: 50%;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #15161c;
+  background: var(--c);
+}
+
+/* ---------------- Oracle text (grounding anchor) ---------------- */
+.oracle {
+  margin-top: 1.1rem;
+  background: var(--surface-inset);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 0.7rem 1rem;
+}
+.oracle summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.oracle summary::-webkit-details-marker { display: none; }
+.oracle summary::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(-45deg);
+  transition: transform 0.18s ease;
+  flex-shrink: 0;
+}
+.oracle[open] summary::before { transform: rotate(45deg); }
+.oracle-hint {
+  color: var(--faint);
+  font-weight: 400;
+  font-size: 0.78rem;
+}
+.oracle pre {
+  margin: 0.7rem 0 0.2rem;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #dddeea;
+}
+
+/* ---------------- Explanation ---------------- */
+.explanation { margin-top: 0.4rem; }
+
+.section {
+  margin-top: 0.8rem;
+  padding: 0.95rem 1rem;
+  background: var(--surface-inset);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+}
+.section h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+}
+.section .sec-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.section .sec-icon svg { width: 100%; height: 100%; display: block; }
+.section p { margin: 0; color: #e7e8f0; }
+.section ol,
+.section ul { margin: 0; padding-left: 1.25rem; color: #e7e8f0; }
+.section li { margin-bottom: 0.4rem; }
+.section li:last-child { margin-bottom: 0; }
+
+/* "In your deck" — green-tinted, set apart */
+.section.in-deck {
+  background: linear-gradient(
+    180deg,
+    rgba(95, 194, 131, 0.12),
+    rgba(95, 194, 131, 0.05)
+  );
+  border-color: rgba(95, 194, 131, 0.45);
+}
+.section.in-deck h3 { color: var(--g); }
+
+/* Words-to-know term list */
+.terms { list-style: none; padding: 0; margin: 0; }
+.terms li {
+  margin-bottom: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.8rem;
+  color: #e7e8f0;
+}
+.terms li:last-child { margin-bottom: 0; }
+.terms .term {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Demo banner */
+.demo-banner {
+  background: var(--accent-soft);
+  border: 1px solid rgba(231, 194, 125, 0.5);
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.6rem;
+}
+
+.explanation-meta {
+  margin-top: 1rem;
+  font-size: 0.74rem;
+  color: var(--faint);
+  text-align: center;
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+  max-width: 660px;
+  margin: 1rem auto 2.5rem;
+  padding: 0 1.25rem;
+  color: var(--faint);
+  font-size: 0.72rem;
+  text-align: center;
+}
+footer a { color: var(--accent); text-decoration: none; }
+.fan-content { opacity: 0.7; margin-top: 0.6rem; }
+
+/* ---------------- Spinner ---------------- */
+.spinner {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--hairline-strong);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: -2px;
+  margin-right: 0.5rem;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition: none !important; }
+}

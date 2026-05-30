@@ -1,0 +1,60 @@
+{
+  "explanation": {
+    "in_plain_words": "Teval, the Balanced Scale is a powerful 4/4 Spirit Dragon that flies over most blockers. When it attacks, it sends cards from your own deck to your graveyard — and your graveyard is a resource you want to build up, because Teval rewards you every time cards leave it by creating Zombie tokens.",
+    "when_you_can_play_it": "You can play this card during your main phase, before you begin your attack step, as long as you have the required mana available: one mana of any color, one black mana, one green mana, and one blue mana (four mana total).",
+    "how_it_works": [
+      "1. Pay the mana cost: one of any color, one black, one green, and one blue. Teval enters the battlefield as a 4/4 creature.",
+      "2. On any turn you choose to attack with Teval, its first ability triggers automatically.",
+      "3. You mill three cards — you take the top three cards of your own deck and put them into your graveyard.",
+      "4. After milling, you may choose to return a land card from your graveyard to the battlefield. That land comes in tapped, meaning you cannot use it for mana until your next turn.",
+      "5. Whenever one or more cards leave your graveyard for any reason — such as that land being returned to the battlefield in step 4 — Teval's second ability triggers and you create one 2/2 black Zombie Druid creature token.",
+      "6. Important: even if many cards leave your graveyard at the exact same moment, you still only get one Zombie Druid token from that single event."
+    ],
+    "words_to_know": [
+      {
+        "term": "Flying",
+        "definition": "Teval can only be blocked by creatures that also have flying or have a keyword called reach. Most creatures on the ground cannot stop it."
+      },
+      {
+        "term": "Mill",
+        "definition": "You take cards from the top of your deck and put them directly into your graveyard. Here, you mill three cards each time Teval attacks, meaning three cards move from the top of your deck to your graveyard."
+      },
+      {
+        "term": "{1}{B}{G}{U} (mana cost)",
+        "definition": "This is what you pay to cast the card. {1} means one mana of any color. {B} means one black mana. {G} means one green mana. {U} means one blue mana. So you need four mana total, three of which must be specific colors."
+      },
+      {
+        "term": "Legendary",
+        "definition": "You can only have one card named Teval, the Balanced Scale on the battlefield at a time. If a second one appears, you must choose one to keep and put the other into the graveyard."
+      },
+      {
+        "term": "Graveyard",
+        "definition": "A face-up discard pile next to your deck where your used, destroyed, or milled cards go."
+      },
+      {
+        "term": "Tapped",
+        "definition": "A card is turned sideways to show it has been used and is not ready to use again yet. A tapped land cannot produce mana until your next turn."
+      },
+      {
+        "term": "Token",
+        "definition": "A creature that is created during the game, not from a card in your deck. Here, a 2/2 black Zombie Druid token is a 2/2 creature that appears on your side of the battlefield."
+      },
+      {
+        "term": "Trigger",
+        "definition": "Some abilities happen automatically when a condition is met. Teval's abilities trigger on their own — you do not need to pay extra mana for them."
+      },
+      {
+        "term": "Attacks",
+        "definition": "During your turn you can choose to send your creatures to attack your opponent. Declaring a creature as an attacker is what activates Teval's first ability."
+      }
+    ],
+    "example_turn": "It is your turn and you have Teval on the battlefield. You declare Teval as an attacker. Its first ability triggers: you mill three cards — say you reveal a Forest, a creature, and a spell, all going to your graveyard. You then choose to return that Forest from your graveyard to the battlefield tapped. Because a card (the Forest) just left your graveyard, Teval's second ability triggers and you create a 2/2 black Zombie Druid token. Now your opponent must deal with both Teval in the air and a new token on the ground.",
+    "in_your_deck": "Several cards in your deck share Teval's love of milling and the graveyard. Diviner of Mist and Colossal Grave-Reaver are also Dragons with flying and mill, so they help fill your graveyard alongside Teval, and like Teval they grow stronger when attacking. Junji, the Midnight Sky is another flying Dragon Spirit that cares about the graveyard, giving you more ways to take advantage of all those milled cards. Lord of the Forsaken, Necropolis Fiend, and Tasigur, the Golden Fang also have abilities tied to the graveyard, so the cards Teval mills keep generating value for you. Hedron Crab mills more cards into your graveyard, feeding Teval's token-making ability. Wonder sits in your graveyard and can give your creatures — including those Zombie tokens Teval creates — the flying ability, letting your whole team soar over blockers."
+  },
+  "card_name": "Teval, the Balanced Scale",
+  "oracle_id": "c8cbf0ec-ec98-4cb3-8068-60e92bbd740d",
+  "in_deck": true,
+  "deck_name": "Sultai Arisen (Tarkir: Dragonstorm)",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-05-30T03:39:21.218Z"
+}

@@ -1,0 +1,85 @@
+{
+  "_comment": "Hand-written sample explanations shown in DEMO mode (no API key). Real, accurate, beginner-facing. Keyed by lowercased card name. These let you preview the finished look before connecting a paid API key.",
+  "lightning bolt": {
+    "in_plain_words": "A cheap, fast spell that deals 3 damage to anything you choose — a creature, a player, or a planeswalker.",
+    "when_you_can_play_it": "It's an instant, so you can play it almost any time, even during your opponent's turn or in the middle of combat — as long as you have one red mana.",
+    "how_it_works": [
+      "Pay {R} (one red mana).",
+      "Choose any target: a creature, a player, or a planeswalker.",
+      "It deals 3 damage to that target.",
+      "A creature with 3 or less toughness is destroyed; a player loses 3 life."
+    ],
+    "words_to_know": [
+      { "term": "Instant", "definition": "A spell you can cast at almost any time, including on other players' turns." },
+      { "term": "{R}", "definition": "One red mana, paid from a red source such as a Mountain." },
+      { "term": "Damage", "definition": "Lowers a creature's toughness for the turn (enough destroys it) or reduces a player's life total." },
+      { "term": "Any target", "definition": "You choose what it hits: a creature, a player, or a planeswalker." }
+    ],
+    "example_turn": "Your opponent attacks with a 3/3 creature. Before damage happens, you cast Lightning Bolt targeting it, dealing 3 damage — the creature is destroyed and never hits you."
+  },
+  "llanowar elves": {
+    "in_plain_words": "A small green creature whose job is to make extra mana. Tap it to get one green mana to help cast your other spells.",
+    "when_you_can_play_it": "Play it like any creature — on your own turn, during your main phase, when nothing else is happening.",
+    "how_it_works": [
+      "Pay {G} to put the 1/1 Elf onto the battlefield.",
+      "It has \"summoning sickness\" the turn it arrives, so you can't tap it for mana until your next turn (unless something gives it haste).",
+      "After that, tap it ({T}) to add one green mana to spend on spells or abilities.",
+      "You can do this once per turn; it untaps at the start of your next turn."
+    ],
+    "words_to_know": [
+      { "term": "{T} (tap symbol)", "definition": "Turn the creature sideways to use its ability; it can't be used again until it untaps." },
+      { "term": "Add {G}", "definition": "Produce one green mana." },
+      { "term": "Mana", "definition": "The resource you spend to cast spells and use abilities." },
+      { "term": "Summoning sickness", "definition": "A creature can't attack or use {T} abilities until you've controlled it since the start of your turn." }
+    ],
+    "example_turn": "Turn 1 you play a Forest and cast Llanowar Elves. Turn 2 you play another Forest and tap the Elf — now you have 3 mana available instead of 2, letting you cast something bigger a turn early."
+  },
+  "serra angel": {
+    "in_plain_words": "A strong 4/4 flying creature that can attack and still stay back to defend on the same turn.",
+    "when_you_can_play_it": "On your own turn, during your main phase, when you have five mana including two white.",
+    "how_it_works": [
+      "Pay {3}{W}{W} to put the 4/4 Angel onto the battlefield.",
+      "Because it has flying, only creatures with flying or reach can block it.",
+      "Because it has vigilance, attacking with it doesn't tap it — so it's still available to block on your opponent's next turn."
+    ],
+    "words_to_know": [
+      { "term": "Flying", "definition": "Can only be blocked by creatures with flying or reach." },
+      { "term": "Vigilance", "definition": "Attacking doesn't tap this creature, so it can still block afterward." },
+      { "term": "{3}{W}{W}", "definition": "Three mana of any color plus two white mana." },
+      { "term": "4/4", "definition": "Power 4 (the damage it deals) and toughness 4 (the damage needed to destroy it)." }
+    ],
+    "example_turn": "You attack with Serra Angel in the air for 4 damage. Normally attacking taps a creature, but vigilance keeps it untapped — so when your opponent swings back, the Angel is still ready to block."
+  },
+  "counterspell": {
+    "in_plain_words": "A reactive spell that stops an opponent's spell from happening at all.",
+    "when_you_can_play_it": "It's an instant, so you hold it and cast it in response to a spell your opponent is casting — before that spell takes effect.",
+    "how_it_works": [
+      "Wait until an opponent casts a spell.",
+      "In response, cast Counterspell, paying {U}{U}, and target that spell.",
+      "The targeted spell is \"countered\": it does nothing and goes to its owner's graveyard without ever happening."
+    ],
+    "words_to_know": [
+      { "term": "Counter (a spell)", "definition": "Stop a spell so it never takes effect; it goes to the graveyard instead." },
+      { "term": "Instant", "definition": "Castable any time, including during an opponent's turn." },
+      { "term": "{U}{U}", "definition": "Two blue mana." },
+      { "term": "Target spell", "definition": "You must point it at a specific spell that is currently being cast." }
+    ],
+    "example_turn": "Your opponent casts a big creature. While that spell is still waiting to resolve, you cast Counterspell targeting it — the creature is countered and never enters play."
+  },
+  "giant growth": {
+    "in_plain_words": "A cheap combat trick that makes one creature much bigger for the rest of the turn.",
+    "when_you_can_play_it": "It's an instant, so you can cast it any time — most often during combat to surprise your opponent.",
+    "how_it_works": [
+      "Pay {G} and choose a target creature (yours or an opponent's).",
+      "That creature gets +3/+3 — its power and toughness each go up by 3.",
+      "The bonus lasts until the end of the turn, then wears off."
+    ],
+    "words_to_know": [
+      { "term": "Instant", "definition": "Castable any time, including during combat." },
+      { "term": "+3/+3", "definition": "Adds 3 to power and 3 to toughness." },
+      { "term": "Until end of turn", "definition": "The effect disappears when the turn ends." },
+      { "term": "Combat trick", "definition": "An instant played during combat to win a fight or push extra damage." }
+    ],
+    "example_turn": "Your 2/2 is blocked by a 3/3. Before combat damage, you cast Giant Growth on your creature, making it 5/5 — it survives and destroys the 3/3 instead of dying."
+  }
+}

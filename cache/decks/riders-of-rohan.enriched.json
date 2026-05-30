@@ -1,0 +1,893 @@
+{
+  "id": "riders-of-rohan",
+  "name": "Riders of Rohan (LOTR Commander)",
+  "count": 81,
+  "cards": {
+    "éowyn, shieldmaiden": {
+      "name": "Éowyn, Shieldmaiden",
+      "keywords": [
+        "first strike",
+        "haste",
+        "trample",
+        "tokens"
+      ],
+      "subtypes": [
+        "human",
+        "knight"
+      ],
+      "themes": [
+        "tokens",
+        "drawing cards"
+      ]
+    },
+    "aragorn, king of gondor": {
+      "name": "Aragorn, King of Gondor",
+      "keywords": [
+        "lifelink",
+        "vigilance"
+      ],
+      "subtypes": [
+        "human",
+        "noble"
+      ],
+      "themes": [
+        "gaining life",
+        "+1/+1 from attacking"
+      ]
+    },
+    "beregond of the guard": {
+      "name": "Beregond of the Guard",
+      "keywords": [
+        "vigilance"
+      ],
+      "subtypes": [
+        "human",
+        "soldier"
+      ],
+      "themes": []
+    },
+    "champions of minas tirith": {
+      "name": "Champions of Minas Tirith",
+      "keywords": [],
+      "subtypes": [
+        "human",
+        "soldier"
+      ],
+      "themes": []
+    },
+    "gilraen, dúnedain protector": {
+      "name": "Gilraen, Dúnedain Protector",
+      "keywords": [
+        "lifelink",
+        "vigilance",
+        "counter",
+        "exile"
+      ],
+      "subtypes": [
+        "human",
+        "noble"
+      ],
+      "themes": [
+        "gaining life"
+      ]
+    },
+    "grey host reinforcements": {
+      "name": "Grey Host Reinforcements",
+      "keywords": [
+        "flying",
+        "ward",
+        "counter",
+        "exile"
+      ],
+      "subtypes": [
+        "spirit",
+        "soldier"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "the graveyard"
+      ]
+    },
+    "lossarnach captain": {
+      "name": "Lossarnach Captain",
+      "keywords": [
+        "first strike"
+      ],
+      "subtypes": [
+        "human",
+        "soldier"
+      ],
+      "themes": [
+        "tokens"
+      ]
+    },
+    "archivist of gondor": {
+      "name": "Archivist of Gondor",
+      "keywords": [],
+      "subtypes": [
+        "human",
+        "advisor"
+      ],
+      "themes": [
+        "drawing cards"
+      ]
+    },
+    "denethor, stone seer": {
+      "name": "Denethor, Stone Seer",
+      "keywords": [
+        "scry",
+        "sacrifice"
+      ],
+      "subtypes": [
+        "human",
+        "noble"
+      ],
+      "themes": [
+        "sacrificing"
+      ]
+    },
+    "fealty to the realm": {
+      "name": "Fealty to the Realm",
+      "keywords": [
+        "enchant"
+      ],
+      "subtypes": [
+        "aura"
+      ],
+      "themes": []
+    },
+    "call for aid": {
+      "name": "Call for Aid",
+      "keywords": [
+        "haste",
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing"
+      ]
+    },
+    "gimli of the glittering caves": {
+      "name": "Gimli of the Glittering Caves",
+      "keywords": [
+        "treasure",
+        "double strike",
+        "counter",
+        "legendary"
+      ],
+      "subtypes": [
+        "dwarf",
+        "warrior"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "tokens"
+      ]
+    },
+    "boromir, gondor's hope": {
+      "name": "Boromir, Gondor's Hope",
+      "keywords": [],
+      "subtypes": [
+        "human",
+        "warrior"
+      ],
+      "themes": [
+        "+1/+1 from attacking",
+        "artifacts"
+      ]
+    },
+    "éomer, king of rohan": {
+      "name": "Éomer, King of Rohan",
+      "keywords": [
+        "double strike",
+        "counter"
+      ],
+      "subtypes": [
+        "human",
+        "noble"
+      ],
+      "themes": [
+        "+1/+1 counters"
+      ]
+    },
+    "faramir, steward of gondor": {
+      "name": "Faramir, Steward of Gondor",
+      "keywords": [
+        "tokens",
+        "legendary"
+      ],
+      "subtypes": [
+        "human",
+        "noble"
+      ],
+      "themes": [
+        "tokens"
+      ]
+    },
+    "forth eorlingas!": {
+      "name": "Forth Eorlingas!",
+      "keywords": [
+        "haste",
+        "trample",
+        "tokens"
+      ],
+      "subtypes": [],
+      "themes": [
+        "tokens"
+      ]
+    },
+    "oath of eorl": {
+      "name": "Oath of Eorl",
+      "keywords": [
+        "haste",
+        "indestructible",
+        "trample",
+        "counter",
+        "sacrifice",
+        "tokens"
+      ],
+      "subtypes": [
+        "saga"
+      ],
+      "themes": [
+        "tokens",
+        "sacrificing"
+      ]
+    },
+    "riders of rohan": {
+      "name": "Riders of Rohan",
+      "keywords": [
+        "dash",
+        "haste",
+        "trample",
+        "tokens"
+      ],
+      "subtypes": [
+        "human",
+        "knight"
+      ],
+      "themes": [
+        "tokens"
+      ]
+    },
+    "taunt from the rampart": {
+      "name": "Taunt from the Rampart",
+      "keywords": [
+        "goad"
+      ],
+      "subtypes": [],
+      "themes": []
+    },
+    "crown of gondor": {
+      "name": "Crown of Gondor",
+      "keywords": [
+        "equip",
+        "legendary"
+      ],
+      "subtypes": [
+        "equipment"
+      ],
+      "themes": []
+    },
+    "bastion protector": {
+      "name": "Bastion Protector",
+      "keywords": [
+        "indestructible"
+      ],
+      "subtypes": [
+        "human",
+        "soldier"
+      ],
+      "themes": []
+    },
+    "dearly departed": {
+      "name": "Dearly Departed",
+      "keywords": [
+        "flying",
+        "counter"
+      ],
+      "subtypes": [
+        "spirit"
+      ],
+      "themes": [
+        "+1/+1 counters",
+        "the graveyard"
+      ]
+    },
+    "frontline medic": {
+      "name": "Frontline Medic",
+      "keywords": [
+        "battalion",
+        "indestructible",
+        "mana cost",
+        "counter",
+        "sacrifice"
+      ],
+      "subtypes": [
+        "human",
+        "cleric"
+      ],
+      "themes": [
+        "sacrificing"
+      ]
+    },
+    "increasing devotion": {
+      "name": "Increasing Devotion",
+      "keywords": [
+        "flashback",
+        "flash",
+        "exile",
+        "tokens"
+      ],
+      "subtypes": [],
+      "themes": [
+        "tokens",
+        "the graveyard"
+      ]
+    },
+    "marshal's anthem": {
+      "name": "Marshal's Anthem",
+      "keywords": [
+        "multikicker",
+        "enchant",
+        "kicker"
+      ],
+      "subtypes": [],
+      "themes": [
+        "the graveyard",
+        "enchantments"
+      ]
+    },
+    "selfless squire": {
+      "name": "Selfless Squire",
+      "keywords": [
+        "flash",
+        "counter"
+      ],
+      "subtypes": [
+        "human",
+        "soldier"
+      ],
+      "themes": [
+        "+1/+1 counters"
+      ]
+    },
+    "unbreakable formation": {
+      "name": "Unbreakable Formation",
+      "keywords": [
+        "addendum",
+        "indestructible",
+        "vigilance",
+        "counter"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 counters"
+      ]
+    },
+    "verge rangers": {
+      "name": "Verge Rangers",
+      "keywords": [
+        "first strike"
+      ],
+      "subtypes": [
+        "human",
+        "scout",
+        "ranger"
+      ],
+      "themes": []
+    },
+    "visions of glory": {
+      "name": "Visions of Glory",
+      "keywords": [
+        "flashback",
+        "flash",
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": [
+        "tokens",
+        "the graveyard"
+      ]
+    },
+    "weathered wayfarer": {
+      "name": "Weathered Wayfarer",
+      "keywords": [],
+      "subtypes": [
+        "human",
+        "nomad",
+        "cleric"
+      ],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "combat celebrant": {
+      "name": "Combat Celebrant",
+      "keywords": [
+        "exert"
+      ],
+      "subtypes": [
+        "human",
+        "warrior"
+      ],
+      "themes": []
+    },
+    "court of ire": {
+      "name": "Court of Ire",
+      "keywords": [
+        "enchant"
+      ],
+      "subtypes": [],
+      "themes": [
+        "enchantments"
+      ]
+    },
+    "earthquake": {
+      "name": "Earthquake",
+      "keywords": [
+        "flying"
+      ],
+      "subtypes": [],
+      "themes": []
+    },
+    "flamerush rider": {
+      "name": "Flamerush Rider",
+      "keywords": [
+        "dash",
+        "haste",
+        "exile"
+      ],
+      "subtypes": [
+        "human",
+        "warrior"
+      ],
+      "themes": [
+        "tokens",
+        "+1/+1 from attacking"
+      ]
+    },
+    "frontier warmonger": {
+      "name": "Frontier Warmonger",
+      "keywords": [
+        "menace"
+      ],
+      "subtypes": [
+        "human",
+        "warrior"
+      ],
+      "themes": []
+    },
+    "harsh mentor": {
+      "name": "Harsh Mentor",
+      "keywords": [],
+      "subtypes": [
+        "human",
+        "cleric"
+      ],
+      "themes": [
+        "artifacts"
+      ]
+    },
+    "shared animosity": {
+      "name": "Shared Animosity",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1/+1 from attacking"
+      ]
+    },
+    "zealous conscripts": {
+      "name": "Zealous Conscripts",
+      "keywords": [
+        "haste"
+      ],
+      "subtypes": [
+        "human",
+        "warrior"
+      ],
+      "themes": []
+    },
+    "supreme verdict": {
+      "name": "Supreme Verdict",
+      "keywords": [
+        "counter"
+      ],
+      "subtypes": [],
+      "themes": []
+    },
+    "door of destinies": {
+      "name": "Door of Destinies",
+      "keywords": [
+        "counter"
+      ],
+      "subtypes": [],
+      "themes": [
+        "artifacts"
+      ]
+    },
+    "vanquisher's banner": {
+      "name": "Vanquisher's Banner",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "drawing cards",
+        "artifacts"
+      ]
+    },
+    "battlefield forge": {
+      "name": "Battlefield Forge",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "clifftop retreat": {
+      "name": "Clifftop Retreat",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "exotic orchard": {
+      "name": "Exotic Orchard",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "furycalm snarl": {
+      "name": "Furycalm Snarl",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "glacial fortress": {
+      "name": "Glacial Fortress",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "port town": {
+      "name": "Port Town",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "prairie stream": {
+      "name": "Prairie Stream",
+      "keywords": [],
+      "subtypes": [
+        "plains",
+        "island"
+      ],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "sulfur falls": {
+      "name": "Sulfur Falls",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "throne of the high city": {
+      "name": "Throne of the High City",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "windbrisk heights": {
+      "name": "Windbrisk Heights",
+      "keywords": [
+        "hideaway",
+        "mana cost",
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "lost to legend": {
+      "name": "Lost to Legend",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "erkenbrand, lord of westfold": {
+      "name": "Erkenbrand, Lord of Westfold",
+      "keywords": [],
+      "subtypes": [
+        "human",
+        "soldier"
+      ],
+      "themes": []
+    },
+    "banishing light": {
+      "name": "Banishing Light",
+      "keywords": [
+        "enchant",
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": [
+        "enchantments"
+      ]
+    },
+    "fiend hunter": {
+      "name": "Fiend Hunter",
+      "keywords": [
+        "exile"
+      ],
+      "subtypes": [
+        "human",
+        "cleric"
+      ],
+      "themes": []
+    },
+    "palace jailer": {
+      "name": "Palace Jailer",
+      "keywords": [
+        "exile"
+      ],
+      "subtypes": [
+        "human",
+        "soldier"
+      ],
+      "themes": []
+    },
+    "path to exile": {
+      "name": "Path to Exile",
+      "keywords": [
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": []
+    },
+    "sunset revelry": {
+      "name": "Sunset Revelry",
+      "keywords": [
+        "tokens"
+      ],
+      "subtypes": [],
+      "themes": [
+        "tokens",
+        "gaining life",
+        "drawing cards"
+      ]
+    },
+    "swords to plowshares": {
+      "name": "Swords to Plowshares",
+      "keywords": [
+        "exile"
+      ],
+      "subtypes": [],
+      "themes": [
+        "gaining life"
+      ]
+    },
+    "village bell-ringer": {
+      "name": "Village Bell-Ringer",
+      "keywords": [
+        "flash"
+      ],
+      "subtypes": [
+        "human",
+        "scout"
+      ],
+      "themes": []
+    },
+    "prince imrahil the fair": {
+      "name": "Prince Imrahil the Fair",
+      "keywords": [],
+      "subtypes": [
+        "human",
+        "noble"
+      ],
+      "themes": [
+        "tokens",
+        "drawing cards"
+      ]
+    },
+    "humble defector": {
+      "name": "Humble Defector",
+      "keywords": [],
+      "subtypes": [
+        "human",
+        "rogue"
+      ],
+      "themes": [
+        "drawing cards"
+      ]
+    },
+    "théoden, king of rohan": {
+      "name": "Théoden, King of Rohan",
+      "keywords": [
+        "double strike"
+      ],
+      "subtypes": [
+        "human",
+        "noble"
+      ],
+      "themes": []
+    },
+    "arcane signet": {
+      "name": "Arcane Signet",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "commander's sphere": {
+      "name": "Commander's Sphere",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "drawing cards",
+        "artifacts"
+      ]
+    },
+    "heirloom blade": {
+      "name": "Heirloom Blade",
+      "keywords": [
+        "equip"
+      ],
+      "subtypes": [
+        "equipment"
+      ],
+      "themes": []
+    },
+    "herald's horn": {
+      "name": "Herald's Horn",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "artifacts"
+      ]
+    },
+    "sol ring": {
+      "name": "Sol Ring",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "talisman of conviction": {
+      "name": "Talisman of Conviction",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "artifacts",
+        "+1 mana / ramp"
+      ]
+    },
+    "talisman of progress": {
+      "name": "Talisman of Progress",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "artifacts",
+        "+1 mana / ramp"
+      ]
+    },
+    "thought vessel": {
+      "name": "Thought Vessel",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "wayfarer's bauble": {
+      "name": "Wayfarer's Bauble",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "artifacts",
+        "+1 mana / ramp"
+      ]
+    },
+    "command tower": {
+      "name": "Command Tower",
+      "keywords": [],
+      "subtypes": [],
+      "themes": []
+    },
+    "evolving wilds": {
+      "name": "Evolving Wilds",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "field of ruin": {
+      "name": "Field of Ruin",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "path of ancestry": {
+      "name": "Path of Ancestry",
+      "keywords": [
+        "scry"
+      ],
+      "subtypes": [],
+      "themes": []
+    },
+    "rogue's passage": {
+      "name": "Rogue's Passage",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "secluded courtyard": {
+      "name": "Secluded Courtyard",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "+1 mana / ramp"
+      ]
+    },
+    "terramorphic expanse": {
+      "name": "Terramorphic Expanse",
+      "keywords": [
+        "sacrifice"
+      ],
+      "subtypes": [],
+      "themes": [
+        "sacrificing",
+        "+1 mana / ramp"
+      ]
+    },
+    "tranquil cove": {
+      "name": "Tranquil Cove",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "gaining life",
+        "+1 mana / ramp"
+      ]
+    },
+    "wind-scarred crag": {
+      "name": "Wind-Scarred Crag",
+      "keywords": [],
+      "subtypes": [],
+      "themes": [
+        "gaining life",
+        "+1 mana / ramp"
+      ]
+    }
+  }
+}

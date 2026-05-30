@@ -1,0 +1,68 @@
+{
+  "explanation": {
+    "in_plain_words": "Raphael, the Muscle is a legendary Mutant Ninja Turtle creature card. He makes your creatures with counters on them deal twice as much damage, and when he enters the battlefield he gives you a special Mutagen token you can use later.",
+    "when_you_can_play_it": "You can play Raphael during your main phase when you have enough mana available. He costs five mana total: four mana of any color plus one red mana. Because he is a commander, he starts the game in a special zone called the command zone and can be cast from there.",
+    "how_it_works": [
+      "Pay four mana of any color and one red mana to cast Raphael from the command zone.",
+      "When Raphael arrives on the battlefield, you immediately create one Mutagen token.",
+      "The Mutagen token is a colorless artifact. You can spend one mana and tap it, then sacrifice it, to place a +1/+1 counter on any creature you choose. You can only do this at the same time you could cast a sorcery, meaning during your own main phase when nothing else is happening.",
+      "From now on, any creature you control that has any kind of counter on it deals double the damage it normally would. For example, if a creature with a +1/+1 counter on it would deal 3 damage, it deals 6 instead.",
+      "If damage is being split among multiple targets, the amounts are decided first and then each amount is doubled separately.",
+      "If all of the damage a creature would deal is prevented by some other effect, Raphael's doubling no longer applies to that damage."
+    ],
+    "words_to_know": [
+      {
+        "term": "{4}{R} (mana cost)",
+        "definition": "The symbols in the top-right corner show what you pay to cast this card. The '4' means four mana of any color, and {R} means one red mana, for a total of five mana."
+      },
+      {
+        "term": "Legendary",
+        "definition": "You can only control one permanent with the same legendary name at a time. If you somehow got a second Raphael, the Muscle, you would have to choose one to keep and put the other into the graveyard."
+      },
+      {
+        "term": "Creature",
+        "definition": "A card type that can enter the battlefield and fight. Raphael is a 4/4, meaning he has 4 power (he deals 4 damage when attacking) and 4 toughness (he can survive up to 4 damage before dying)."
+      },
+      {
+        "term": "Counter (marker)",
+        "definition": "A small marker placed on a card to track an ongoing effect. A +1/+1 counter permanently raises a creature's power and toughness by 1 each while it stays on the creature. Raphael's ability cares about any creature you control that has any counter on it."
+      },
+      {
+        "term": "Double (damage)",
+        "definition": "Raphael's ability means that whenever one of your creatures with a counter on it would deal damage, that damage amount is multiplied by two."
+      },
+      {
+        "term": "Mutagen token",
+        "definition": "A colorless artifact token with the subtype Mutagen. It has one ability: pay one mana, tap it, and sacrifice it to put a +1/+1 counter on a target creature. This can only be done during your main phase when nothing else is happening."
+      },
+      {
+        "term": "Enters",
+        "definition": "This means the moment the card arrives on the battlefield from wherever it was (such as the command zone). 'When Raphael enters' means the effect happens right as he shows up."
+      },
+      {
+        "term": "Partner — Character select",
+        "definition": "A special ability that lets you have two commanders instead of one, as long as both commanders have this exact same 'Partner — Character select' ability. Both start in the command zone at the beginning of the game."
+      },
+      {
+        "term": "Command zone",
+        "definition": "A special area outside the normal battlefield where your commander waits at the start of the game. You can cast your commander from here."
+      },
+      {
+        "term": "Sorcery (activate only as a sorcery)",
+        "definition": "This means you can only use the Mutagen token's ability during your own main phase when the stack is empty — not during combat, not during your opponent's turn, and not in response to other things happening."
+      },
+      {
+        "term": "{T} (tap symbol)",
+        "definition": "The tap symbol means you must turn the card sideways to use this ability. A tapped card is exhausted and cannot be tapped again until it is untapped, usually at the start of your next turn."
+      }
+    ],
+    "example_turn": "It's your main phase. You have five mana available, including one red. You cast Raphael from the command zone. He arrives on the battlefield and you immediately get a Mutagen token. On a later turn, you spend one mana, tap the Mutagen token, and sacrifice it to put a +1/+1 counter on your 3/3 creature. Now that creature has a counter on it, so Raphael's ability applies: when it attacks and would deal 4 damage (because it's now a 4/4), it deals 8 damage instead.",
+    "in_your_deck": "Raphael's 'Partner — Character select' ability means you can pair him with one other commander who also has that same ability. Leonardo, the Balance, Donatello, the Brains, Splinter, the Mentor, Michelangelo, the Heart, and April O'Neil, Live on the Scene all share this Partner ability, so you could choose any one of them as your second commander alongside Raphael, giving your deck two colors of identity to build around. Raphael's damage-doubling ability gets stronger the more creatures in your deck have counters on them. Cards like Tokka & Rahzar, Unsupervised, Lita, Little Orphan Amphibian, Heroes in a Half Shell, Michelangelo, the Heart, and Leonardo, the Balance all care about counters, meaning they can help put counters on your creatures so Raphael's doubling kicks in more often. Raphael also cares about tokens, and he shares that theme with Leonardo, Michelangelo, Donatello, Splinter, Tokka & Rahzar, Lita, and April O'Neil, so your deck has plenty of ways to generate tokens and make use of them together."
+  },
+  "card_name": "Raphael, the Muscle",
+  "oracle_id": "22008c3b-6e15-41cc-a15c-7871495191aa",
+  "in_deck": true,
+  "deck_name": "Teenage Mutant Ninja Turtles — Turtle Power!",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-05-30T03:47:37.827Z"
+}
