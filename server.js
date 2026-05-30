@@ -260,6 +260,7 @@ async function loadDeckList() {
       decks.push({
         id,
         name: def.name || id,
+        commander: def.commander || null, // used for the deck-picker thumbnail
         cardCount: uniqueCards + (def.basics || 0),
         uniqueCards,
       });

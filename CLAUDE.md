@@ -17,12 +17,12 @@ that assumes many users.
 
 ---
 
-## Implementation status (as built — last updated 2026-05-29)
+## Implementation status (as built — last updated 2026-05-30)
 
 **Built and working** (features 1–4 of the original spec):
 
-1. ✅ Type-a-name + Scryfall autocomplete → card detail (image, mana cost as colored
-   pips, type line, official Oracle text).
+1. ✅ Type-a-name + Scryfall autocomplete → card detail (image, mana cost as real MTG
+   mana symbols, type line, official Oracle text).
 2. ✅ Grounded LLM beginner explanation in five sections (plain words / when to play /
    how it works / words to know / example turn), via a server-side endpoint.
 3. ✅ Keyword glossary (`data/keywords.json`) passed to the model so keywords are defined
@@ -30,30 +30,39 @@ that assumes many users.
 4. ✅ Precon deck context — pick a deck once (remembered per browser); cards in that deck
    get an extra "In your deck" note grounded in a precomputed related-card list.
 
+**Also done since launch:**
+
+- ✅ **UI redesign** — "Apple-sleek meets Magic" theme (see *Design* below).
+- ✅ **Deployed live** to Render as an always-on public site (see *Deployment* below).
+
 **Deferred / not built:**
 
 - ❌ Photo / OCR identification (feature 5) — intentionally not built; low value.
 - ❌ Scryfall **bulk-data** local store — currently using live endpoints (fine at this
    volume; see Data sources).
 - ⏳ A 4th precon deck — three are loaded; the group's 4th deck is pending.
+- ⏳ Desktop / wide layout — still mobile-first single column; widescreen polish is the
+   next design task (to be done in a fresh session).
 
 ### Tech stack
 
 - **Backend:** Node + Express, single file `server.js` (ES modules). Serves the static
   frontend and exposes the API. No database — flat JSON files on disk.
 - **Frontend:** vanilla HTML/CSS/JS in `public/` (no build step, no framework).
-  Mobile-first; used on phones at the table.
+  Mobile-first; used on phones at the table. Two CDN webfonts (Google Fonts *Cinzel* +
+  *mana-font* for real mana symbols) — fine since the app is online-only anyway.
 - **LLM:** Anthropic Claude via `@anthropic-ai/sdk`. Structured output (JSON schema) +
   a capped thinking budget.
-- Runs locally; accessible to phones on the same Wi-Fi at `http://<LAN-IP>:3000`.
+- **Hosting:** deployed on Render (paid Starter instance, always-on) at a public URL.
+  Also runs locally; on the same Wi-Fi it's reachable at `http://<LAN-IP>:3000`.
 
 ### File map
 
 ```
 server.js              Express app: /api/explain, /api/decks, /api/health, deck engine
 public/index.html      UI shell (deck bar, search, card panel, explanation sections)
-public/app.js          Autocomplete, Scryfall fetch, mana pips, deck persistence, render
-public/styles.css      Mobile-first dark theme
+public/app.js          Autocomplete, Scryfall fetch, mana symbols, color identity, render
+public/styles.css      Frosted-glass dark theme (mobile-first)
 data/keywords.json     Canonical beginner definitions of keywords + mana/tap symbols
 data/decks/<id>.json   One precon per file: { name, commander, basics, cards: [names] }
 data/decks/_FORMAT.md  How to add a deck
@@ -61,6 +70,10 @@ data/demo-explanations.json  Hand-written samples shown in demo mode
 cache/<oracle_id>.json           Cached generic explanations (paid once per card)
 cache/by-deck/<deck>/<id>.json   Cached deck-aware explanations (per card + deck)
 cache/decks/<id>.enriched.json   Per-deck card profiles from Scryfall (free, for relating)
+render.yaml            Render Blueprint (build/start commands + env vars) for deploy
+.node-version          Pins Node 22 on the host
+DEPLOY.md              Step-by-step deploy + cache-review workflow
+.claude/launch.json    Local preview-tool config (npm start on port 3000)
 .env                   ANTHROPIC_API_KEY, PORT, EXPLAINER_MODEL (gitignored)
 ```
 
@@ -77,6 +90,49 @@ cache/decks/<id>.enriched.json   Per-deck card profiles from Scryfall (free, for
   Consumer ChatGPT/Claude subscriptions cannot power this — only the paid API can, via a
   key. There is intentionally **no login screen**.
 - **Demo mode** lets the app run with **no key and no billing** for previewing — see below.
+
+### Design (UI)
+
+The look is **"Apple-sleek meets Magic"** — modern iOS-style materials carrying MTG
+flavor, mobile-first. Implemented in `public/styles.css` + `public/index.html`:
+
+- **Frosted-glass surfaces** (`backdrop-filter: blur + saturate`) floating over a soft
+  **color-pie aurora** (radial W/U/B/R/G glows) on a near-black graphite base.
+- **Type:** *Cinzel* (serif, MTG-flavored) for the app title and card names; system font
+  for body so it stays readable at the table.
+- **Real mana symbols** via the *mana-font* webfont, not text circles. `renderMana()` in
+  `app.js` maps each `{…}` token to a `ms ms-*` class and handles generic/hybrid
+  (`{W/U}`)/monocolor-hybrid (`{2/W}`)/phyrexian (`{W/P}`)/tap, with a **text-pip
+  fallback** for anything the font can't draw.
+- **Color-identity framing:** `applyColorIdentity()` reads `card.color_identity` and puts
+  an accent bar on the card panel — mono color, **gold gradient for multicolor**, silver
+  for colorless (`.card.id-w/u/b/r/g/multi/c` in CSS).
+- **Glanceable explanation:** each of the five sections is its own inset card with a small
+  inline-SVG line icon + gold tracked header (icons defined in the `ICONS` map in
+  `app.js`); the "In your deck" section keeps its green-tinted treatment and shows the
+  deck name in its title.
+- Graceful degradation: if the CDN fonts fail, Cinzel → serif fallback and mana symbols →
+  text pips; nothing breaks functionally.
+
+### Deployment
+
+Live on **Render** as an always-on **paid Starter** web service (chosen over the free tier
+so it never cold-starts — a ~50s wake mid-game was the dealbreaker). Setup artifacts:
+
+- `render.yaml` — Blueprint: `npm install` / `npm start`, `EXPLAINER_MODEL=claude-sonnet-4-6`,
+  and `ANTHROPIC_API_KEY` as a dashboard-entered secret (`sync: false`, never in git).
+- `.node-version` → Node 22.
+- **Code lives on GitHub** (`chhristopher/mtg-card-explainer`); Render auto-deploys on push
+  to `main`.
+- **Publishing flow is not yet streamlined** — the initial upload was via GitHub's web
+  drag-and-drop. A one-click path (GitHub Desktop or `git push`) is a TODO for the next
+  session, so design tweaks can ship without re-dragging files.
+
+**The cache is the durable accuracy store — and it's committed to git.** Render's disk is
+ephemeral (wiped on redeploy), so `cache/` is intentionally **un-ignored** and tracked.
+Workflow to lock in a reviewed explanation: edit the JSON in `cache/`, commit, push →
+auto-redeploy. Live-generated explanations are cached on the running instance but don't
+survive a redeploy unless committed. See `DEPLOY.md`.
 
 ### Demo mode
 
@@ -195,11 +251,12 @@ Wizards decklists + community sites, then Scryfall-validated) and stored per dec
 ## Technical notes
 
 - **API key is server-side only.** The LLM call lives on `/api/explain`. Never put the key
-  in browser code. (`.env` is gitignored.)
+  in browser code. (`.env` is gitignored; on Render it's an encrypted env var.)
 - **Multi-face cards** (transform / MDFC / split): combine `card_faces` for Oracle text and
   the prompt; use the first face's image if there's no card-level image. Done in both
   `server.js` (`combineOracle`) and `public/app.js`.
-- **Mana pips:** rendered from the `mana_cost` string (`{2}{W}{U}`), colored by mana color.
+- **Mana symbols:** rendered from the `mana_cost` string (`{2}{W}{U}`) into the *mana-font*
+  webfont via `renderMana()` / `manaFontSuffix()` in `app.js`, with a text-pip fallback.
 - **Mobile-first:** primary use is phones at the table.
 - **Structured output:** the model is forced to a JSON schema (five sections, plus an
   `in_your_deck` field when deck context applies). `how_it_works` items must not be

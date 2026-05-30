@@ -1,0 +1,8 @@
+node_modules/
+.env
+*.log
+.DS_Store
+
+# NOTE: cache/ is intentionally committed. Hosts (Render etc.) use an ephemeral
+# disk that wipes on every redeploy, so the committed cache is the durable store
+# for hand-reviewed explanations. Edit a cache JSON, commit it, redeploy.

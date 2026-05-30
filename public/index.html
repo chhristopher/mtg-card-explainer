@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#0c0d12" />
-    <title>MTG Card Explainer</title>
+    <title>MTG Card Coach</title>
 
     <!-- Fonts: Cinzel for MTG-flavored display type, Mana font for real mana symbols -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,20 +26,29 @@
     <header>
       <div class="brand">
         <span class="brand-mark" aria-hidden="true">
-          <i class="ms ms-w"></i><i class="ms ms-u"></i><i class="ms ms-b"></i><i class="ms ms-r"></i><i class="ms ms-g"></i>
+          <i class="ms ms-w ms-cost"></i><i class="ms ms-u ms-cost"></i><i class="ms ms-b ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-g ms-cost"></i>
         </span>
-        <h1>Card Explainer</h1>
+        <h1>Card Coach</h1>
       </div>
-      <p class="tagline">Type a card name. Get a plain-English explanation.</p>
+      <p class="tagline">The card explains itself. This explains the card.</p>
     </header>
 
     <main>
       <div class="deck-bar">
-        <label for="deck">Which precon deck are you playing?</label>
-        <div class="select-wrap">
-          <select id="deck">
-            <option value="">No deck — just look up cards</option>
-          </select>
+        <span id="deck-label" class="deck-label">Which precon deck are you playing?</span>
+        <div class="deck-picker">
+          <button
+            type="button"
+            id="deck-trigger"
+            class="deck-trigger"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-labelledby="deck-label deck-trigger"
+          >
+            <span class="deck-current"></span>
+            <span class="deck-caret" aria-hidden="true"></span>
+          </button>
+          <ul id="deck-menu" class="deck-menu" role="listbox" tabindex="-1" hidden></ul>
         </div>
       </div>
 

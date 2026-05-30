@@ -3,7 +3,9 @@
 const SCRYFALL = "https://api.scryfall.com";
 
 const els = {
-  deck: document.getElementById("deck"),
+  deckTrigger: document.getElementById("deck-trigger"),
+  deckCurrent: document.querySelector(".deck-current"),
+  deckMenu: document.getElementById("deck-menu"),
   search: document.getElementById("search"),
   suggestions: document.getElementById("suggestions"),
   status: document.getElementById("status"),
@@ -23,31 +25,176 @@ let activeRequest = 0; // guards against out-of-order responses
 
 const DECK_KEY = "mtg-explainer-deck";
 
-// ---------- deck picker ----------
+// ---------- deck picker (custom dropdown with commander thumbnails) ----------
+// A native <select> can't show images, so this is a small custom listbox. The
+// chosen deck id lives in `selectedDeckId`; the rest of the app reads that.
+
+let selectedDeckId = "";
+let deckItems = [{ id: "", name: "No deck — just look up cards", thumb: null }];
+let deckMenuIndex = -1; // keyboard-highlighted option
 
 async function loadDecks() {
   try {
     const res = await fetch("/api/decks");
     const { decks } = await res.json();
-    for (const d of decks) {
-      const opt = document.createElement("option");
-      opt.value = d.id;
-      opt.textContent = `${d.name} (${d.cardCount} cards)`;
-      els.deck.appendChild(opt);
-    }
-    const saved = localStorage.getItem(DECK_KEY);
-    if (saved && [...els.deck.options].some((o) => o.value === saved)) {
-      els.deck.value = saved;
-    }
+    deckItems = [
+      { id: "", name: "No deck — just look up cards", thumb: null },
+      ...decks.map((d) => ({
+        id: d.id,
+        name: d.name,
+        commander: d.commander,
+        thumb: null,
+      })),
+    ];
   } catch {
     /* deck list is optional; the app still works without it */
   }
+
+  const saved = localStorage.getItem(DECK_KEY);
+  selectedDeckId =
+    saved && deckItems.some((d) => d.id === saved) ? saved : "";
+
+  renderDeckMenu();
+  updateDeckTrigger();
+  fetchDeckThumbs(); // commander art, filled in as it arrives
 }
 
-els.deck.addEventListener("change", () => {
-  localStorage.setItem(DECK_KEY, els.deck.value);
-  // Re-explain the current card with the new deck context, if one is shown.
+// Pull each deck's commander art from Scryfall (free, CORS-friendly) for the
+// thumbnail. Failures are silent — the item just keeps its placeholder.
+async function fetchDeckThumbs() {
+  await Promise.all(
+    deckItems.map(async (item) => {
+      if (!item.commander) return;
+      try {
+        const res = await fetch(
+          `${SCRYFALL}/cards/named?exact=${encodeURIComponent(item.commander)}`
+        );
+        if (!res.ok) return;
+        const card = await res.json();
+        const uris = card.image_uris || card.card_faces?.[0]?.image_uris;
+        // Full card image = a mini "poster"; the portrait thumb box matches it.
+        item.thumb = uris?.small || uris?.art_crop || null;
+      } catch {
+        /* leave placeholder */
+      }
+    })
+  );
+  renderDeckMenu();
+  updateDeckTrigger();
+}
+
+function deckById(id) {
+  return deckItems.find((d) => d.id === id) || deckItems[0];
+}
+
+function thumbHtml(item) {
+  if (item.thumb) {
+    return `<img class="deck-thumb" src="${item.thumb}" alt="" loading="lazy" />`;
+  }
+  return `<span class="deck-thumb deck-thumb-empty" aria-hidden="true"></span>`;
+}
+
+function updateDeckTrigger() {
+  const item = deckById(selectedDeckId);
+  const thumb = item.id ? thumbHtml(item) : "";
+  els.deckCurrent.innerHTML = `${thumb}<span class="deck-current-name">${esc(
+    item.name
+  )}</span>`;
+}
+
+function renderDeckMenu() {
+  els.deckMenu.innerHTML = deckItems
+    .map(
+      (item, i) =>
+        `<li class="deck-option" role="option" data-id="${esc(item.id)}" id="deck-opt-${i}" aria-selected="${
+          item.id === selectedDeckId ? "true" : "false"
+        }">${
+          item.id
+            ? thumbHtml(item)
+            : '<span class="deck-thumb-spacer" aria-hidden="true"></span>'
+        }<span class="deck-option-name">${esc(item.name)}</span></li>`
+    )
+    .join("");
+}
+
+function openDeckMenu() {
+  els.deckMenu.hidden = false;
+  els.deckTrigger.setAttribute("aria-expanded", "true");
+  deckMenuIndex = Math.max(
+    0,
+    deckItems.findIndex((d) => d.id === selectedDeckId)
+  );
+  highlightDeckOption();
+}
+
+function closeDeckMenu() {
+  els.deckMenu.hidden = true;
+  els.deckTrigger.setAttribute("aria-expanded", "false");
+  deckMenuIndex = -1;
+}
+
+function highlightDeckOption() {
+  const opts = [...els.deckMenu.querySelectorAll(".deck-option")];
+  opts.forEach((li, i) =>
+    li.classList.toggle("highlight", i === deckMenuIndex)
+  );
+  if (opts[deckMenuIndex]) {
+    els.deckTrigger.setAttribute(
+      "aria-activedescendant",
+      opts[deckMenuIndex].id
+    );
+    opts[deckMenuIndex].scrollIntoView({ block: "nearest" });
+  }
+}
+
+function chooseDeck(id) {
+  setDeck(id);
+  closeDeckMenu();
+  els.deckTrigger.focus();
+}
+
+// Set the active deck, persist it, and re-explain the current card in the new
+// deck's context if one is shown.
+function setDeck(id) {
+  selectedDeckId = id;
+  localStorage.setItem(DECK_KEY, id);
+  renderDeckMenu();
+  updateDeckTrigger();
   if (currentCard) selectCard(currentCard.name);
+}
+
+els.deckTrigger.addEventListener("click", () => {
+  if (els.deckMenu.hidden) openDeckMenu();
+  else closeDeckMenu();
+});
+
+els.deckMenu.addEventListener("click", (e) => {
+  const li = e.target.closest(".deck-option");
+  if (li) chooseDeck(li.dataset.id);
+});
+
+els.deckTrigger.addEventListener("keydown", (e) => {
+  if (els.deckMenu.hidden) {
+    if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openDeckMenu();
+    }
+    return;
+  }
+  if (e.key === "ArrowDown") {
+    e.preventDefault();
+    deckMenuIndex = Math.min(deckMenuIndex + 1, deckItems.length - 1);
+    highlightDeckOption();
+  } else if (e.key === "ArrowUp") {
+    e.preventDefault();
+    deckMenuIndex = Math.max(deckMenuIndex - 1, 0);
+    highlightDeckOption();
+  } else if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    if (deckItems[deckMenuIndex]) chooseDeck(deckItems[deckMenuIndex].id);
+  } else if (e.key === "Escape") {
+    closeDeckMenu();
+  }
 });
 
 let currentCard = null;
@@ -113,6 +260,33 @@ function renderMana(manaCost, container) {
   }
 }
 
+// Turn body text that may contain {X} mana/symbol tokens (e.g. "{4}{R}", "{T}")
+// into HTML with real inline mana symbols, falling back to a small text pip for
+// anything the font can't draw. Non-token text is HTML-escaped. Used for the
+// Oracle block, explanation paragraphs, and word definitions so symbols read the
+// same everywhere instead of showing raw "{4}{R}".
+function withManaSymbols(text) {
+  const str = String(text ?? "");
+  const re = /\{([^}]+)\}/g;
+  let out = "";
+  let last = 0;
+  let m;
+  while ((m = re.exec(str)) !== null) {
+    out += esc(str.slice(last, m.index));
+    const suffix = manaFontSuffix(m[1]);
+    if (suffix) {
+      out += `<i class="ms ms-${suffix} ms-cost ms-inline" title="${esc(
+        m[0]
+      )}" aria-label="${esc(m[0])}"></i>`;
+    } else {
+      out += `<span class="pip-inline">${esc(m[1])}</span>`;
+    }
+    last = re.lastIndex;
+  }
+  out += esc(str.slice(last));
+  return out;
+}
+
 // Frame the card panel by its Scryfall color identity: mono color, gold for
 // multicolor, silver for colorless.
 function applyColorIdentity(card, el) {
@@ -144,6 +318,10 @@ function cardImage(card) {
 }
 
 // ---------- autocomplete ----------
+
+// Tapping the (sticky) search to look up the next card selects the previous
+// card's name so you can just start typing over it.
+els.search.addEventListener("focus", () => els.search.select());
 
 els.search.addEventListener("input", () => {
   const q = els.search.value.trim();
@@ -210,6 +388,12 @@ document.addEventListener("click", (e) => {
   if (!els.search.contains(e.target) && !els.suggestions.contains(e.target)) {
     clearSuggestions();
   }
+  if (
+    !els.deckTrigger.contains(e.target) &&
+    !els.deckMenu.contains(e.target)
+  ) {
+    closeDeckMenu();
+  }
 });
 
 // ---------- card lookup + explanation ----------
@@ -268,7 +452,7 @@ function renderCard(card) {
   els.name.textContent = card.name;
   renderMana(card.mana_cost || card.card_faces?.[0]?.mana_cost, els.cost);
   els.type.textContent = card.type_line || "";
-  els.oracle.textContent = combineOracle(card);
+  els.oracle.innerHTML = withManaSymbols(combineOracle(card));
 
   const img = cardImage(card);
   if (img) {
@@ -290,7 +474,7 @@ async function explain(card, rulings, requestId) {
     const res = await fetch("/api/explain", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ card, rulings, deckId: els.deck.value || null }),
+      body: JSON.stringify({ card, rulings, deckId: selectedDeckId || null }),
     });
     const data = await res.json();
     if (requestId !== activeRequest) return;
@@ -317,6 +501,16 @@ const ICONS = {
   deck: '<path d="M12 2 2 7l10 5 10-5z"/><path d="M2 12l10 5 10-5"/><path d="M2 17l10 5 10-5"/>',
 };
 
+// Per-deck accent for the "How to use with your deck" section, as an "r, g, b"
+// triple. All three precons are multicolor, so these are hand-picked to be
+// distinct and on-theme rather than derived from color identity (which would
+// make them all gold). Unknown decks fall back to green via the CSS default.
+const DECK_ACCENTS = {
+  "tmnt-turtle-power": "95, 194, 131", // green — turtles
+  "sultai-arisen": "150, 123, 220", // violet — graveyard/Sultai
+  "riders-of-rohan": "224, 102, 104", // crimson — Rohan/Boros, distinct from the gold headers
+};
+
 function renderExplanation(data) {
   const e = data.explanation;
   const sections = [];
@@ -328,22 +522,30 @@ function renderExplanation(data) {
   }
 
   sections.push(
-    section("In plain words", `<p>${esc(e.in_plain_words)}</p>`, ICONS.plain)
+    section(
+      "In plain words",
+      `<p>${withManaSymbols(e.in_plain_words)}</p>`,
+      ICONS.plain
+    )
   );
 
   if (e.in_your_deck) {
-    const title = data.deck_name ? `In ${esc(data.deck_name)}` : "In your deck";
+    // The player already picked their deck, so don't repeat its name here —
+    // just label what this section is for.
+    const title = "How to use with your deck";
+    const accent = DECK_ACCENTS[selectedDeckId];
+    const accentStyle = accent ? ` style="--deck-accent:${accent}"` : "";
     sections.push(
-      `<div class="section in-deck"><h3>${secIcon(ICONS.deck)}${title}</h3><p>${esc(
-        e.in_your_deck
-      )}</p></div>`
+      `<div class="section in-deck"${accentStyle}><h3>${secIcon(
+        ICONS.deck
+      )}${title}</h3><p>${withManaSymbols(e.in_your_deck)}</p></div>`
     );
   }
 
   sections.push(
     section(
       "When you can play it",
-      `<p>${esc(e.when_you_can_play_it)}</p>`,
+      `<p>${withManaSymbols(e.when_you_can_play_it)}</p>`,
       ICONS.when
     )
   );
@@ -352,27 +554,37 @@ function renderExplanation(data) {
     // The <ol> already numbers each step; strip any leading "1. " / "2) " the
     // model may have added so beginners don't see doubled numbers.
     const steps = e.how_it_works
-      .map((s) => `<li>${esc(String(s).replace(/^\s*\d+[.)]\s*/, ""))}</li>`)
+      .map(
+        (s) =>
+          `<li>${withManaSymbols(String(s).replace(/^\s*\d+[.)]\s*/, ""))}</li>`
+      )
       .join("");
     sections.push(section("How it works", `<ol>${steps}</ol>`, ICONS.how));
   }
 
   if (Array.isArray(e.words_to_know) && e.words_to_know.length) {
+    // Each term is collapsed by default; tap it to reveal the definition.
     const terms = e.words_to_know
       .map(
         (t) =>
-          `<li><span class="term">${esc(t.term)}</span> — ${esc(
+          `<details class="term-item"><summary><span class="term-name">${withManaSymbols(
+            t.term
+          )}</span></summary><div class="term-def">${withManaSymbols(
             t.definition
-          )}</li>`
+          )}</div></details>`
       )
       .join("");
     sections.push(
-      section("Words to know", `<ul class="terms">${terms}</ul>`, ICONS.words)
+      section("Words to know", `<div class="terms">${terms}</div>`, ICONS.words)
     );
   }
 
   sections.push(
-    section("Example turn", `<p>${esc(e.example_turn)}</p>`, ICONS.example)
+    section(
+      "Example turn",
+      `<p>${withManaSymbols(e.example_turn)}</p>`,
+      ICONS.example
+    )
   );
 
   els.explanation.innerHTML = sections.join("");

@@ -1,0 +1,72 @@
+{
+  "explanation": {
+    "in_plain_words": "Éowyn, Shieldmaiden is a powerful legendary Human Knight creature card. She is tough in a fight thanks to First Strike, and if you played another Human this turn, she rewards you by creating two more Human Knight tokens — and possibly letting you draw a card on top of that.",
+    "when_you_can_play_it": "You can play Éowyn during your main phase (your normal turn to cast cards), as long as you have the right mana available: two mana of any color, one blue mana, one red mana, and one white mana — five mana total.",
+    "how_it_works": [
+      "Pay two mana of any color, one blue mana, one red mana, and one white mana to put Éowyn onto the battlefield. She enters as a 5/4 creature, meaning she deals 5 damage in combat and can survive up to 4 damage before dying.",
+      "Éowyn has First Strike, so whenever she fights in combat, she deals her damage before most other creatures get to hit back. This often means she destroys an enemy before it can hurt her.",
+      "At the start of combat on your turn, the game checks: did another Human creature come onto the battlefield under your control earlier this same turn? If yes, Éowyn's special ability triggers.",
+      "If the check passes, you immediately create two 2/2 red Human Knight creature tokens. Each token has Trample (extra damage spills over to the opponent) and Haste (they can attack right away this turn).",
+      "After creating those two tokens, the game checks again: do you now control six or more Human creatures in total? If yes, you draw one card.",
+      "If no Human entered the battlefield under your control earlier this turn, nothing happens — Éowyn's ability does not trigger at all, and you cannot draw a card even if you already had six or more Humans on the battlefield."
+    ],
+    "words_to_know": [
+      {
+        "term": "Legendary",
+        "definition": "You can only have one copy of Éowyn on the battlefield at a time. If a second one arrives, you must choose one to keep and send the other to the graveyard."
+      },
+      {
+        "term": "Creature",
+        "definition": "A permanent that can attack your opponent and block incoming attacks. Its two numbers (like 5/4) are its power (damage it deals) and toughness (damage it can take before dying)."
+      },
+      {
+        "term": "First Strike",
+        "definition": "Éowyn deals her combat damage before creatures that don't have First Strike. This means she can destroy an enemy creature before it ever gets to hit her back."
+      },
+      {
+        "term": "Token",
+        "definition": "A creature created by a card's ability, not a real card from your deck. If a token ever leaves the battlefield, it simply disappears."
+      },
+      {
+        "term": "Trample",
+        "definition": "When one of the Human Knight tokens attacks and is blocked, any damage beyond what's needed to destroy the blocker carries over and hits the opponent directly."
+      },
+      {
+        "term": "Haste",
+        "definition": "Normally a creature has to wait one full turn before it can attack. Haste removes that wait — the two tokens Éowyn creates can attack the very same turn they are created."
+      },
+      {
+        "term": "{2}",
+        "definition": "Two mana of any color — you can use any combination of colors to pay this part of the cost."
+      },
+      {
+        "term": "{U}",
+        "definition": "One blue mana specifically — must come from a blue mana source."
+      },
+      {
+        "term": "{R}",
+        "definition": "One red mana specifically — must come from a red mana source."
+      },
+      {
+        "term": "{W}",
+        "definition": "One white mana specifically — must come from a white mana source."
+      },
+      {
+        "term": "Beginning of combat",
+        "definition": "A short step at the start of your attack phase, before you actually declare which creatures are attacking. This is when Éowyn's ability checks and triggers."
+      },
+      {
+        "term": "Power/Toughness (5/4)",
+        "definition": "The two numbers on the bottom right of the card. 5 is her power — how much damage she deals when she attacks or blocks. 4 is her toughness — she dies if she takes 4 or more damage at once."
+      }
+    ],
+    "example_turn": "On your turn, you play a Human creature card from your hand during your main phase. That counts as a Human entering the battlefield under your control this turn. Then combat begins. Because a Human entered earlier this turn, Éowyn's ability fires: you create two 2/2 red Human Knight tokens with Trample and Haste. Now count your Humans: Éowyn, the Human you just played, and the two new tokens makes four — not quite six, so no card draw this time. But those two tokens can attack immediately thanks to Haste!",
+    "in_your_deck": "Éowyn works closely with many cards in this deck. Lossarnach Captain and Faramir, Steward of Gondor are both Humans, so playing either one earlier in your turn triggers Éowyn's token-making ability at the start of combat. Riders of Rohan and Flamerush Rider are also Humans with Haste, meaning they can enter the battlefield and attack in the same turn — and their presence as Humans can help push you toward the six-Human threshold for drawing a card. Archivist of Gondor is another Human who helps with that card-draw goal. Cards like Forth Eorlingas!, Oath of Eorl, and Increasing Devotion create even more tokens and flood the board with Humans, making it much easier to reach six Humans and trigger Éowyn's card draw repeatedly."
+  },
+  "card_name": "Éowyn, Shieldmaiden",
+  "oracle_id": "98a2a642-a30a-43e7-b47f-4776c22d1cb0",
+  "in_deck": true,
+  "deck_name": "Riders of Rohan (LOTR Commander)",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-05-30T10:16:49.062Z"
+}

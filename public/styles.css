@@ -77,7 +77,7 @@ body {
 
 /* ---------------- Header ---------------- */
 header {
-  padding: 2rem 1.25rem 0.75rem;
+  padding: 1.4rem 1.25rem 0.6rem;
   text-align: center;
 }
 
@@ -90,8 +90,8 @@ header {
 
 .brand-mark {
   display: inline-flex;
-  gap: 2px;
-  font-size: 0.78rem;
+  gap: 3px;
+  font-size: 1.05rem;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
 }
 
@@ -133,12 +133,16 @@ main {
 
 /* ---------------- Deck picker ---------------- */
 .deck-bar {
+  /* The frosted backdrop-filter makes this a stacking context, which would
+     trap the open menu below the sticky search. Lift the whole bar above it. */
+  position: relative;
+  z-index: 50;
   border-radius: var(--radius);
   padding: 0.85rem 1rem;
   margin-bottom: 0.7rem;
   box-shadow: var(--shadow-soft);
 }
-.deck-bar label {
+.deck-label {
   display: block;
   font-size: 0.74rem;
   font-weight: 600;
@@ -147,11 +151,31 @@ main {
   color: var(--faint);
   margin-bottom: 0.5rem;
 }
-.select-wrap {
-  position: relative;
+
+.deck-picker { position: relative; }
+
+/* Trigger button (shows the current deck's thumbnail + name) */
+.deck-trigger {
+  width: 100%;
+  min-height: 3.1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2.2rem 0.5rem 0.6rem;
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: left;
+  color: var(--text);
+  background: var(--surface-inset);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
 }
-.select-wrap::after {
-  content: "";
+.deck-trigger:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.deck-caret {
   position: absolute;
   right: 0.9rem;
   top: 50%;
@@ -160,28 +184,107 @@ main {
   border-right: 2px solid var(--muted);
   border-bottom: 2px solid var(--muted);
   transform: translateY(-65%) rotate(45deg);
+  transition: transform 0.18s ease;
   pointer-events: none;
 }
-.deck-bar select {
-  width: 100%;
-  padding: 0.75rem 2rem 0.75rem 0.8rem;
-  font-size: 1rem;
-  font-family: inherit;
-  color: var(--text);
-  background: var(--surface-inset);
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius-sm);
-  appearance: none;
-  -webkit-appearance: none;
+.deck-trigger[aria-expanded="true"] .deck-caret {
+  transform: translateY(-25%) rotate(225deg);
 }
-.deck-bar select:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-soft);
+
+.deck-current {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+}
+.deck-current-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Commander thumbnail (mini card "cover") */
+.deck-thumb {
+  width: 36px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  object-fit: cover;
+  background: var(--surface);
+  box-shadow: 0 2px 8px -3px rgba(0, 0, 0, 0.7);
+}
+.deck-thumb-empty {
+  display: inline-block;
+  border: 1px solid var(--hairline);
+}
+/* Keeps the "No deck" row's text aligned with the deck names below it. */
+.deck-thumb-spacer {
+  width: 36px;
+  flex-shrink: 0;
+}
+
+/* Fanned-out option list */
+.deck-menu {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0.3rem;
+  position: absolute;
+  z-index: 40;
+  left: 0;
+  right: 0;
+  background: rgba(22, 24, 32, 0.94);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-height: 65vh;
+  overflow-y: auto;
+}
+.deck-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.deck-option-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.deck-option:hover,
+.deck-option.highlight {
+  background: var(--accent-soft);
+}
+.deck-option[aria-selected="true"] .deck-option-name {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 /* ---------------- Search + autocomplete ---------------- */
-.search { position: relative; }
+/* Sticky so the lookup box stays one tap away while scrolling a long
+   explanation — you look up many cards in a row at the table. */
+.search {
+  position: sticky;
+  top: max(0.5rem, env(safe-area-inset-top));
+  z-index: 30;
+}
+/* Blurred scrim behind the pill so content scrolling under it fades out
+   instead of peeking sharply above the floating box. Bleeds to the screen
+   edges (cancels main's padding) and stays shorter than the gap to the deck
+   bar so it's invisible at rest. */
+.search::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -0.5rem -1.1rem 0;
+  background: linear-gradient(180deg, var(--bg-2) 60%, transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+}
 
 .search-icon {
   position: absolute;
@@ -320,6 +423,28 @@ main {
   font-size: 1.18rem;
   line-height: 1;
 }
+/* Inline mana symbols inside body text (Oracle text, explanations, terms). */
+.ms-inline {
+  font-size: 0.95em;
+  vertical-align: -0.12em;
+  margin: 0 0.04em;
+}
+/* Inline fallback pip for symbols the font can't draw, sized to the text. */
+.pip-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25em;
+  height: 1.25em;
+  padding: 0 0.3em;
+  border-radius: 1em;
+  font-size: 0.78em;
+  font-weight: 700;
+  color: #15161c;
+  background: var(--c);
+  vertical-align: -0.18em;
+}
+
 /* Fallback text pips for symbols the font can't render */
 .mana .pip {
   display: inline-flex;
@@ -411,31 +536,54 @@ main {
 .section li { margin-bottom: 0.4rem; }
 .section li:last-child { margin-bottom: 0; }
 
-/* "In your deck" — green-tinted, set apart */
+/* "In your deck" — tinted and set apart. The accent is per-deck: app.js sets
+   --deck-accent (an "r, g, b" triple) inline from the chosen deck; falls back
+   to green. */
 .section.in-deck {
+  --deck-accent: 95, 194, 131;
   background: linear-gradient(
     180deg,
-    rgba(95, 194, 131, 0.12),
-    rgba(95, 194, 131, 0.05)
+    rgba(var(--deck-accent), 0.12),
+    rgba(var(--deck-accent), 0.05)
   );
-  border-color: rgba(95, 194, 131, 0.45);
+  border-color: rgba(var(--deck-accent), 0.45);
 }
-.section.in-deck h3 { color: var(--g); }
+.section.in-deck h3 { color: rgb(var(--deck-accent)); }
 
-/* Words-to-know term list */
-.terms { list-style: none; padding: 0; margin: 0; }
-.terms li {
-  margin-bottom: 0.5rem;
+/* Words-to-know — each term collapsed by default; tap to reveal its meaning. */
+.terms { display: flex; flex-direction: column; gap: 0.5rem; }
+.term-item {
   background: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-sm);
-  padding: 0.6rem 0.8rem;
-  color: #e7e8f0;
+  overflow: hidden;
 }
-.terms li:last-child { margin-bottom: 0; }
-.terms .term {
+.term-item > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.6rem 0.8rem;
   font-weight: 700;
   color: #fff;
+}
+.term-item > summary::-webkit-details-marker { display: none; }
+.term-item > summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(-45deg);
+  transition: transform 0.18s ease;
+  flex-shrink: 0;
+}
+.term-item[open] > summary::after { transform: rotate(45deg); }
+.term-def {
+  padding: 0 0.8rem 0.7rem;
+  color: #e7e8f0;
 }
 
 /* Demo banner */

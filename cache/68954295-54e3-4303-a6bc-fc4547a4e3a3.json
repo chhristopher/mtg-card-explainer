@@ -1,0 +1,41 @@
+{
+  "explanation": {
+    "in_plain_words": "Llanowar Elves is a small green creature — a 1/1 Elf Druid. Its special ability lets you tap it (turn it sideways) to produce one green mana, which you can then use to pay for other spells or abilities.",
+    "when_you_can_play_it": "You can play this card during your main phase (your turn, when nothing else is happening). You pay one green mana to put it into play. Once it is in play, you can use its tap ability at any time you could normally use a mana ability — usually to help pay for something else you want to cast.",
+    "how_it_works": [
+      "Pay one green mana to cast Llanowar Elves from your hand. It enters the battlefield as a 1/1 creature.",
+      "On any turn after it enters play, you can use its ability: tap Llanowar Elves (turn it sideways) to add one green mana to your mana pool.",
+      "Use that green mana immediately to help pay for a spell or ability that costs green mana.",
+      "Because Llanowar Elves is now tapped, you cannot use its ability again until your next turn, when it untaps (is turned upright again)."
+    ],
+    "words_to_know": [
+      {
+        "term": "{G} (mana cost)",
+        "definition": "The green mana symbol. To cast this card, you must pay one green mana — the kind produced by forests and other green sources."
+      },
+      {
+        "term": "{T} (tap symbol)",
+        "definition": "Tap means to turn the card sideways. When you see {T} in an ability's cost, you must tap the card to use that ability. Once tapped, it cannot be tapped again until it untaps, which normally happens at the start of your next turn."
+      },
+      {
+        "term": "Add {G}",
+        "definition": "This means one green mana is created for you to spend right away on spells or abilities that require green mana."
+      },
+      {
+        "term": "1/1",
+        "definition": "The two numbers in the bottom-right corner. The first number (1) is power — how much damage this creature deals in combat. The second number (1) is toughness — how much damage it can take before it dies."
+      },
+      {
+        "term": "Creature — Elf Druid",
+        "definition": "This card is a creature, meaning it can attack and block. Elf and Druid are its subtypes, which are just labels that may matter for other cards that care about Elves or Druids."
+      }
+    ],
+    "example_turn": "It's your second turn. You tap a Forest to make one green mana and use it to cast Llanowar Elves — it enters the battlefield. On your third turn, before casting anything, you tap Llanowar Elves to add one green mana, then tap two Forests for two more green mana. Now you have three green mana total, letting you cast a spell that costs three green mana one full turn earlier than you normally could."
+  },
+  "card_name": "Llanowar Elves",
+  "oracle_id": "68954295-54e3-4303-a6bc-fc4547a4e3a3",
+  "in_deck": false,
+  "deck_name": null,
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-05-30T10:03:16.213Z"
+}
