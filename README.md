@@ -10,6 +10,9 @@ so it doesn't make up rules.
 
 Built to be used on a **phone at the table**, mobile-first.
 
+**🔗 Live site: https://mtg-card-explainer.onrender.com** — always-on and public, no login.
+Just open it on your phone. (Hosted on Render; see [Deployment](#deployment).)
+
 > Note: the GitHub repo is named `mtg-card-explainer` for historical reasons; the
 > app itself is **Card Coach**.
 
@@ -30,8 +33,9 @@ are wrong — see "Reviewing explanations" below.
 
 ## Using it
 
-The app is deployed and always-on (see "Deployment"), so day to day you just open
-the URL on your phone — there's no login. Pick your precon deck from the top bar
+**Card Coach is live and public at the URL above** — hosted on Render, always-on,
+no login or install. Day to day you just open it on your phone. Pick your precon
+deck from the top bar
 once (it's remembered in your browser) and start looking up cards. The search bar
 stays **pinned at the top** as you scroll, so you can look up the next card without
 scrolling back up; tapping it selects the previous card name so you can type right
@@ -65,7 +69,10 @@ arrival. Specific touches:
 If the CDN fonts ever fail to load, it degrades gracefully to a serif fallback and
 text pips; nothing breaks functionally.
 
-## Running it locally
+## Running it locally (for development)
+
+You don't need this to *use* Card Coach — the live site above is always on. This
+is only for working on the app itself.
 
 Requires Node 20+ (the host pins Node 22) and an Anthropic API key.
 
@@ -78,9 +85,11 @@ npm start
 
 Then open the URL it prints.
 
-### On your phone, on the same Wi‑Fi
+### Testing a local build on your phone
 
-The server listens on all interfaces, so from a phone on the same network visit:
+(For the deployed app, just use the live URL above — this is only for a server
+you're running locally.) The local server listens on all interfaces, so from a
+phone on the same Wi‑Fi visit:
 
 ```
 http://<your-computer's-LAN-IP>:3000
